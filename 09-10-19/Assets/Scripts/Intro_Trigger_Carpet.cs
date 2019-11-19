@@ -17,7 +17,6 @@ public class Intro_Trigger_Carpet : MonoBehaviour
         {
             Debug.Log("PLAYER");
             manager.IntroManager = Resources.Load("IntroManager") as GameObject;
-            ;
         }
     }
 }

@@ -75,6 +75,8 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\cameraCam.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Intro_AddText.cs" />
+    <Compile Include="Assets\Scripts\Intro_Canvas.cs" />
     <Compile Include="Assets\Scripts\Intro_Trigger_Carpet.cs" />
     <Compile Include="Assets\Scripts\MoveToPoint.cs" />
     <Compile Include="Assets\Scripts\NPC_Events.cs" />
