@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\Scripts\cameraCam.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MoveToPoint.cs" />
+    <Compile Include="Assets\Scripts\NPC_Events.cs" />
     <Compile Include="Assets\Scripts\NPC_GuestA_1.cs" />
     <Compile Include="Assets\Scripts\Player_DoorActions.cs" />
     <Compile Include="Assets\Scripts\Player_Grabbing.cs" />

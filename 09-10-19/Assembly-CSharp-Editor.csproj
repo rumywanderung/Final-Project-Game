@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Editor\ReadmeEditor.cs" />
     <Compile Include="Assets\VIDE\Data\Editor\VDE.cs" />
     <Compile Include="Assets\VIDE\Data\Editor\VIDE_AssignC.cs" />
     <Compile Include="Assets\VIDE\Data\Editor\VIDE_Editor.cs" />

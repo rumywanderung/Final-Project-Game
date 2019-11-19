@@ -60,6 +60,7 @@ public class VIDEDemoPlayer : MonoBehaviour
         if (!VD.isActive)
         {
             transform.Rotate(0 * Input.GetAxis("Mouse X"), 0,0);
+            //transform.Rotate(0 * Input.GetAxis("Mouse Y"), -1, 0);
             float move = Input.GetAxisRaw("Vertical");
             float movebis = Input.GetAxisRaw("Horizontal");
             transform.position += transform.forward * 3 * move * Time.deltaTime;
