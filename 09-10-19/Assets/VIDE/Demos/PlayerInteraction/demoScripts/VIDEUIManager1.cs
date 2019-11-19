@@ -42,7 +42,7 @@ public class VIDEUIManager1 : MonoBehaviour
     public VIDEDemoPlayer player;
 
     ////////////////////my variables
-    public DEMO_UIManager intro;
+    public GameObject IntroManager;
 
     //We'll be using this to store references of the current player choices
     private List<Text> currentChoices = new List<Text>();

@@ -63,6 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Resources\DEMO_UIManager.cs" />
+    <Compile Include="Assets\Resources\VIDE_Assign.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -94,7 +95,6 @@
     <Compile Include="Assets\VIDE\Demos\PlayerInteraction\demoScripts\witchExample.cs" />
     <Compile Include="Assets\VIDE\Demos\Template\Template_UIManager.cs" />
     <Compile Include="Assets\VIDE\Demos\VeryBasic\minUIExample.cs" />
-    <Compile Include="Assets\VIDE\VIDE_Assign.cs" />
     <None Include="Assets\VIDE\Export\Readme.txt" />
     <None Include="Assets\VIDE\Demos\About.txt" />
     <None Include="Assets\VIDE\Demos\Localization\README.txt" />

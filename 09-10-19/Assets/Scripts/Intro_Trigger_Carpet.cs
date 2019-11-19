@@ -15,8 +15,9 @@ public class Intro_Trigger_Carpet : MonoBehaviour
     {
         if (other.tag == "player")
         {
-           manager.intro = Resources.Load("DEMO_UIManager intro") as DEMO_UIManager;
-;
+            Debug.Log("PLAYER");
+            manager.IntroManager = Resources.Load("IntroManager") as GameObject;
+            ;
         }
     }
 }
