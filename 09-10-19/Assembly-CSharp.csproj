@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Resources\DEMO_UIManager.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
@@ -73,6 +74,7 @@
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
     <Compile Include="Assets\Scripts\cameraCam.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Intro_Trigger_Carpet.cs" />
     <Compile Include="Assets\Scripts\MoveToPoint.cs" />
     <Compile Include="Assets\Scripts\NPC_Events.cs" />
     <Compile Include="Assets\Scripts\NPC_GuestA_1.cs" />
@@ -85,7 +87,6 @@
     <Compile Include="Assets\VIDE\Data\VIDE_Localization.cs" />
     <Compile Include="Assets\VIDE\Demos\Localization\VIDEUIManager2.cs" />
     <Compile Include="Assets\VIDE\Demos\MultiInstances\VIDEUIManager3.cs" />
-    <Compile Include="Assets\VIDE\Demos\Narration\DEMO_UIManager.cs" />
     <Compile Include="Assets\VIDE\Demos\PlayerInteraction\demoScripts\CylinderGuy.cs" />
     <Compile Include="Assets\VIDE\Demos\PlayerInteraction\demoScripts\QuestChartDemo.cs" />
     <Compile Include="Assets\VIDE\Demos\PlayerInteraction\demoScripts\VIDEDemoPlayer.cs" />
@@ -102,37 +103,37 @@
     <None Include="Assets\VIDE\ReadMe.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.6f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -318,13 +319,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.6f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>E:/Documents/UNITY/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>E:/Documents/UNITY/ProjetFinal/09-10-19/Library/PackageCache/com.unity.analytics@3.3.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.6f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

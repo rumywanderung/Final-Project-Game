@@ -34,12 +34,15 @@ public class VIDEUIManager1 : MonoBehaviour
     public GameObject playerChoicePrefab;
     public Image playerSprite;
     public Text playerLabel;
-
+    
     bool dialoguePaused = false; //Custom variable to prevent the manager from calling VD.Next
     bool animatingText = false; //Will help us know when text is currently being animated
 
     //Reference to the player script
     public VIDEDemoPlayer player;
+
+    ////////////////////my variables
+    public DEMO_UIManager intro;
 
     //We'll be using this to store references of the current player choices
     private List<Text> currentChoices = new List<Text>();
