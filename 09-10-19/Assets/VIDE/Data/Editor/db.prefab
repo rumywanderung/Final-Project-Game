@@ -43,15 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 268dc70b105993846a123be43345df63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fileIndex: 10
-  skinIndex: 0
+  fileIndex: 11
+  skinIndex: 1
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 5244
+  currentID: 96310
   autosave: 1
   previewPanning: 0
-  currentDiag: 10
+  currentDiag: 11
   locEdit: 0
   pNodeID: 18
   aNodeID: 2
@@ -59,21 +59,6 @@ MonoBehaviour:
   - commentCount: 3
     s_comment:
     - text: This person is busy. Return with a drink and you might get their attention.
-      extraData: 
-      inputSetIndex: 0
-      outputNodeIndex: 7
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 41
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: '"Police. Can I ask you a few questions?" (CHAOS: +1)'
       extraData: 
       inputSetIndex: 0
       outputNodeIndex: -1
@@ -85,6 +70,21 @@ MonoBehaviour:
         y: 0
         width: 0
         height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: '"Police. Can I ask you a few questions?" (CHAOS: +1)'
+      extraData: 
+      inputSetIndex: 0
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 101
+        width: 30
+        height: 28
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -106,13 +106,13 @@ MonoBehaviour:
     ID: 0
     rect:
       serializedVersion: 2
-      x: 70
-      y: 170
+      x: -60
+      y: 60
       width: 349
       height: 286
     pTag: 
     expand: 1
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 84a9114ab28f94e469a62b9feae04bf0, type: 3}
     vars: []
     varKeys: []
     isPlayer: 1
@@ -126,10 +126,10 @@ MonoBehaviour:
       showmore: 0
       outRect:
         serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
@@ -406,7 +406,7 @@ MonoBehaviour:
     - text: 
       extraData: ExtraData
       inputSetIndex: 7
-      outputNodeIndex: 7
+      outputNodeIndex: 1
       outActionIndex: -1
       showmore: 0
       outRect:
@@ -418,7 +418,7 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: '...'
+    - text: What??
       extraData: ExtraData
       inputSetIndex: 7
       outputNodeIndex: -1
@@ -433,31 +433,31 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: Wish to see my magic?
+    - text: The Monstrous Police is here???!!!
       extraData: ExtraData
       inputSetIndex: 7
       outputNodeIndex: -1
       outActionIndex: -1
-      showmore: 0
+      showmore: 1
       outRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      sprites: {fileID: 0}
+      sprites: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
       audios: {fileID: 0}
       visible: 1
     ID: 1
     rect:
       serializedVersion: 2
-      x: 470
-      y: 120
+      x: 460
+      y: 20
       width: 349
-      height: 165
+      height: 192
     pTag: ???
     expand: 0
-    sprite: {fileID: 0}
+    sprite: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
     vars: []
     varKeys: []
     isPlayer: 0

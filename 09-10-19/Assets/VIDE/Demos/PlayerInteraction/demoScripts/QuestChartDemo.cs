@@ -42,14 +42,14 @@ public class QuestChartDemo : MonoBehaviour
                     if (System.IO.Directory.Exists(Application.dataPath + "/VIDE/saves"))
                     {
                         System.IO.Directory.Delete(Application.dataPath + "/VIDE/saves", true);
-                        #if UNITY_EDITOR
+#if UNITY_EDITOR
                         UnityEditor.AssetDatabase.Refresh();
-                        #endif
+#endif
                     }
 
-                    #if UNITY_EDITOR
+#if UNITY_EDITOR
                     UnityEditor.EditorApplication.isPlaying = false;
-                    #endif
+#endif
                 }
             }
     }
@@ -163,7 +163,7 @@ public class QuestChartDemo : MonoBehaviour
         //List<string> items = player.demo_ItemInventory;
         PlayerPrefs.SetInt("interactedWith", interactedWith.Count);
         PlayerPrefs.SetInt("cylinderGuyInteractions", cylinderGuyInteractions.Count);
-        //PlayerPrefs.SetInt("example_ItemInventory", items.Count);
+       // PlayerPrefs.SetInt("example_ItemInventory", items.Count);
 
         for (int i = 0; i < interactedWith.Count; i++)
         {
@@ -175,7 +175,7 @@ public class QuestChartDemo : MonoBehaviour
             PlayerPrefs.SetInt("cylGuyInt" + i.ToString(), cylinderGuyInteractions[i]);
         }
 
-        /*for (int i = 0; i < items.Count; i++)
+      /*  for (int i = 0; i < items.Count; i++)
         {
             PlayerPrefs.SetString("item" + i.ToString(), items[i]);
         }*/
@@ -207,6 +207,6 @@ public class QuestChartDemo : MonoBehaviour
             items.Add(PlayerPrefs.GetString("item" + i.ToString()));
         }
 
-        player.demo_ItemInventory = items;
+        //player.demo_ItemInventory = items;
     }
 }

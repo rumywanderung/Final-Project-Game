@@ -3028,7 +3028,7 @@ namespace VIDE_Data
         /// </summary>
         /// <param name="filename">Name to save the JSON file under.</param>
         /// <param name="saveAssigned">Optionally, save every VA state found within the current scene.</param>
-        public void SaveState(string filename, bool saveAssigned)
+     /*   public void SaveState(string filename, bool saveAssigned)
         {
             Dictionary<string, object> dict = new Dictionary<string, object>();
 
@@ -3069,7 +3069,7 @@ namespace VIDE_Data
         /// </summary>
         /// <param name="filename">The filename of the state to load.</param>
         /// <param name="loadAssigned">Optionally, load the state of every VA found in the scene if filename follows the 'gameObjectName_state' naming convention.</param>
-        public void LoadState(string filename, bool loadAssigned)
+      *//*  public void LoadState(string filename, bool loadAssigned)
         {
             if (!File.Exists(Application.dataPath + "/VIDE/saves/" + filename + ".json"))
             {
@@ -3116,7 +3116,7 @@ namespace VIDE_Data
             }
 
         }
-
+*/
 
         public class NodeData
         {
