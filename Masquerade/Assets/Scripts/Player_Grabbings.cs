@@ -57,7 +57,7 @@ public class Player_Grabbings : MonoBehaviour
                             Debug.Log("WINE");
 
                             Destroy(manager.NPC.gameObject.transform.GetChild(0).gameObject);
-                            GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
+                            GameObject Guest = Resources.Load("GuestA-HasDrink") as GameObject;
                             Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
                         }
                     }
