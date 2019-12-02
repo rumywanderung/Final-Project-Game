@@ -30,7 +30,7 @@ public class NPC_Events : MonoBehaviour
 
     public void DestroyObject()
     {
-        grabableobject = manager.Player.GetComponent<Player_Grabbing>().grabbedObject.gameObject;
+        grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
         Destroy(grabableobject);
     }
 }

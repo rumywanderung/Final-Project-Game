@@ -11,6 +11,8 @@ TagManager:
   - door
   - guestA
   - guestA-1
+  - lookatcue
+  - cue
   layers:
   - Default
   - TransparentFX

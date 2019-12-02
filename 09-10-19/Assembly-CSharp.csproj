@@ -78,6 +78,7 @@
     <Compile Include="Assets\Scripts\Intro_AddText.cs" />
     <Compile Include="Assets\Scripts\Intro_Canvas.cs" />
     <Compile Include="Assets\Scripts\Intro_Trigger_Carpet.cs" />
+    <Compile Include="Assets\Scripts\LookAtCue.cs" />
     <Compile Include="Assets\Scripts\MoveToPoint.cs" />
     <Compile Include="Assets\Scripts\NPC_Events.cs" />
     <Compile Include="Assets\Scripts\NPC_GuestA_1.cs" />
