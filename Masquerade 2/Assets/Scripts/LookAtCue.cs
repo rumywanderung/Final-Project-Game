@@ -9,7 +9,7 @@ public class LookAtCue : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(Cue);
+        Debug.Log("cue = " + Cue);
     }
     private void OnTriggerEnter(Collider other)
     {

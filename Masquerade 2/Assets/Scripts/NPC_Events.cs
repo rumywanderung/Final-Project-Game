@@ -11,10 +11,14 @@ public class NPC_Events : MonoBehaviour
     GameObject grabableobject;
     //cameraEvent
     public Cinemachine.CinemachineVirtualCamera Cam;
+    public Cinemachine.CinemachineVirtualCamera Cam2;
     public GameObject LookAts;
     public GameObject Cue;
     public GameObject dollycart;
     public GameObject dollytrack;
+    private bool cmOn = false;
+    private float times;
+    public Cinemachine.CinemachineVirtualCamera playerCam;
 
     public void Start()
     {
@@ -29,12 +33,36 @@ public class NPC_Events : MonoBehaviour
 
     public void CameraEvent()
     {
+        cmOn = true;
+       
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
-        Cam = FindObjectOfType<Cinemachine.CinemachineVirtualCamera>();
+        Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
         Cam.m_Follow = dollycart.transform;
         Cam.m_LookAt = LookAts.transform;
 
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
+       
+    }
+
+    public void Update()
+    {
+        if (cmOn == true)
+        {
+            if (times < 15)
+            {
+                times += Time.deltaTime;
+                Debug.Log(times);
+
+                if (times >= 15 && Cam != null && dollycart != null)
+                {
+                    Debug.Log("timer ends");
+                    /*Destroy(dollycart.gameObject);
+                    dollytrack = (GameObject)Instantiate(Resources.Load("DollyTrack2", typeof(GameObject)));*/
+                    Destroy(Cam.gameObject);
+                    CinemachineBrain.SoloCamera = playerCam;
+}
+            }
+        }
     }
 }

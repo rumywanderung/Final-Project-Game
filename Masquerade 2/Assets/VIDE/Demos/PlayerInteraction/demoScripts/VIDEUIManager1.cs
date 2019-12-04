@@ -60,7 +60,7 @@ public class VIDEUIManager1 : MonoBehaviour
         //An alternative to this can be preloading dialogues from the VIDE_Assign component!
 
         //Loads the saved state of VIDE_Assigns and dialogues.
-        VD.LoadState("VIDEDEMOScene1", true);
+       //VD.LoadState("VIDEDEMOScene1", true);
     }
 
     //This begins the dialogue and progresses through it (Called by VIDEDemoPlayer.cs)
@@ -265,8 +265,8 @@ public class VIDEUIManager1 : MonoBehaviour
         dialogueContainer.SetActive(false);
         VD.EndDialogue();
 
-        VD.SaveState("VIDEDEMOScene1", true); //Saves VIDE stuff related to EVs and override start nodes
-        QuestChartDemo.SaveProgress(); //saves OUR custom game data
+        //VD.SaveState("VIDEDEMOScene1", true); //Saves VIDE stuff related to EVs and override start nodes
+       // QuestChartDemo.SaveProgress(); //saves OUR custom game data
     }
 
     void OnDisable()
