@@ -63,8 +63,8 @@ public class VIDEDemoPlayer : MonoBehaviour
             //transform.Rotate(0 * Input.GetAxis("Mouse Y"), -1, 0);
             float move = Input.GetAxisRaw("Vertical");
             float movebis = Input.GetAxisRaw("Horizontal");
-            transform.position += transform.forward * 3 * move * Time.deltaTime;
-            transform.position += transform.right * 3 * movebis * Time.deltaTime;
+            transform.position += transform.forward * 10 * move * Time.deltaTime;
+            transform.position += transform.right * 10 * movebis * Time.deltaTime;
             //blue.SetFloat("speed", move);
 
         }
