@@ -182,8 +182,8 @@ public class VIDEUIManager1 : MonoBehaviour
             //Set node sprite if there's any, otherwise try to use default sprite
             if (data.sprite != null)
                 playerSprite.sprite = data.sprite;
-            else if (VD.assigned.defaultPlayerSprite != null)
-                playerSprite.sprite = VD.assigned.defaultPlayerSprite;
+            //else if (VD.assigned.defaultPlayerSprite != null)
+            //    playerSprite.sprite = VD.assigned.defaultPlayerSprite;
 
             SetOptions(data.comments);
 
