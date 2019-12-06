@@ -3,9 +3,13 @@
 {
 	Properties
 	{
-		_MainTex("Texture", 2D) = "green" {}
+		_MainTex("Texture", 2D) = "grey" {}
 		[HDR]
 		_AmbientColor("Ambient Color", Color) = (0.4,0.4,0.4,1)
+		_SpecularColor("Specular Color", Color) = (0.9,0.9,0.9,1)
+		_Glossiness("Glossiness", Float) = 32
+		_RimColor("Rim Color", Color) = (1,1,1,1)
+		_RimAmount("Rim Amount", Range(0, 1)) = 0.716
 	}
 		SubShader
 	{
@@ -33,7 +37,7 @@
 
 		struct appdata
 		{
-		
+			
 			float4 vertex : POSITION;
 			float2 uv : TEXCOORD0;
 			float3 normal : NORMAL;
@@ -47,10 +51,15 @@
 			UNITY_FOG_COORDS(1)
 			float4 vertex : SV_POSITION;
 			float3 worldNormal : NORMAL;
+			float3 viewDir : TEXCOORD1;
 		};
 
 		sampler2D _MainTex;
 		float4 _MainTex_ST;
+		float _Glossiness;
+		float4 _SpecularColor;
+		float4 _RimColor;
+		float _RimAmount;
 
 		v2f vert(appdata v)
 		{
@@ -59,6 +68,7 @@
 			o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 			UNITY_TRANSFER_FOG(o,o.vertex);
 			o.worldNormal = UnityObjectToWorldNormal(v.normal);
+			o.viewDir = WorldSpaceViewDir(v.vertex);
 			return o;
 		}
 
@@ -69,13 +79,28 @@
 
 			float3 normal = normalize(i.worldNormal);
 			float NdotL = dot(_WorldSpaceLightPos0, normal);
-			float lightIntensity = NdotL > 0 ? 1 : 0;
+			float lightIntensity = smoothstep(0, 0.01, NdotL);
 			float4 light = lightIntensity * _LightColor0;
+
+			float3 viewDir = normalize(i.viewDir);
+
+			float3 halfVector = normalize(_WorldSpaceLightPos0 + viewDir);
+			float NdotH = dot(normal, halfVector);
+
+			float specularIntensity = pow(NdotH * lightIntensity, _Glossiness * _Glossiness);
+
+			float4 rimDot = 1 - dot(viewDir, normal);
+			float rimIntensity = smoothstep(_RimAmount - 0.01, _RimAmount + 0.01, rimDot);
+			float4 rim = rimIntensity * _RimColor;
+
 			// sample the texture
 			fixed4 col = tex2D(_MainTex, i.uv);
 			// apply fog
 			UNITY_APPLY_FOG(i.fogCoord, col);
-			return col * (_AmbientColor + light);
+			float specularIntensitySmooth = smoothstep(0.005, 0.01, specularIntensity);
+			float4 specular = specularIntensitySmooth * _SpecularColor;
+
+			return col * (_AmbientColor + light + specular + rim);
 		}
 		ENDCG
 	}
