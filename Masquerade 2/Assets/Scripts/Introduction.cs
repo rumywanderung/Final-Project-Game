@@ -5,30 +5,54 @@ using UnityEngine;
 public class Introduction : MonoBehaviour
 {
 
-    private GameObject intro00;
+    public GameObject intro01;
     private bool inTrigger = false;
+    private bool deletion0 = false;
+    public GameObject info;
+    public GameObject particles;
+    private AudioSource sfx;
 
-    private void OnTriggerStay(Collider other)
+    private void Awake()
+    {
+        sfx = GetComponent<AudioSource>();
+    }
+    private void OnTriggerEnter(Collider other)
     {
         if (other.name == "CubePlayer")
         {
-            Debug.Log("Player is in trigger");
+            Destroy(info.gameObject);
+            Destroy(particles.gameObject);
+            sfx.Play();
             inTrigger = true;
-            Debug.Log(inTrigger);
         }
     }
 
     private void Update()
     {
-        if (inTrigger)
+        if (this.name == "I: 00" && inTrigger == true)
         {
-            Debug.Log("trigger dans update");
+            GameObject intro = Instantiate(Resources.Load("INTRO 00") as GameObject);
+            intro01 = intro;
+            inTrigger = false;
+            deletion0 = true;
+        }
+        else if (this.name == "I: 01" && inTrigger == true)
+        {
+
+        }
+        //when to delete
+        if (deletion0 == true)
+        {
             if (Input.GetKeyUp("e"))
             {
-                Debug.Log("pressed E");
-                intro00 = Resources.Load("Intro 00") as GameObject;
-                Instantiate(intro00, new Vector3(0,0,0), Quaternion.identity);
+                DestroyObjects(intro01);
+                deletion0 = false;
             }
         }
+    }
+
+    private void DestroyObjects(GameObject introToDestroy)
+    {
+        Destroy(introToDestroy);
     }
 }

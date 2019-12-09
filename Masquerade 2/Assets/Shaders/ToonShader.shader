@@ -10,6 +10,7 @@
 		_Glossiness("Glossiness", Float) = 32
 		_RimColor("Rim Color", Color) = (1,1,1,1)
 		_RimAmount("Rim Amount", Range(0, 1)) = 0.716
+		
 	}
 		SubShader
 	{
@@ -73,7 +74,6 @@
 		}
 
 		float4 _AmbientColor;
-
 		fixed4 frag(v2f i) : SV_Target
 		{
 
