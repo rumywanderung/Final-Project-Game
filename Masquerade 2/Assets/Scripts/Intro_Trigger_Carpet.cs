@@ -13,9 +13,9 @@ public class Intro_Trigger_Carpet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "player")
+        if (other.tag == "player" || other.tag == "MainCamera")
         {
-            Debug.Log("PLAYER");
+            //Debug.Log("PLAYER");
             manager.IntroManager = Resources.Load("IntroManager") as GameObject;
         }
     }
