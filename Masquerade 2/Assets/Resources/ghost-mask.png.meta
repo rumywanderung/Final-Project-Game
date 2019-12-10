@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 10
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +34,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,9 +49,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
-  spriteTessellationDetail: -1
-  textureType: 0
+  alphaIsTransparency: 1
+  spriteTessellationDetail: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   maxTextureSizeSet: 0
@@ -69,13 +69,63 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -16, y: -140}
+      - {x: -16, y: -107}
+      - {x: 1, y: -107}
+      - {x: 1, y: 5}
+      - {x: -7, y: 8}
+      - {x: -15, y: 14}
+      - {x: -18, y: 28}
+      - {x: -23, y: 35}
+      - {x: -31, y: 50}
+      - {x: -32, y: 66}
+      - {x: -30, y: 75}
+      - {x: -24, y: 84}
+      - {x: -13, y: 91}
+      - {x: 0, y: 95}
+      - {x: 11, y: 93}
+      - {x: 23, y: 86}
+      - {x: 28, y: 77}
+      - {x: 33, y: 68}
+      - {x: 33, y: 54}
+      - {x: 30, y: 42}
+      - {x: 22, y: 32}
+      - {x: 20, y: 19}
+      - {x: 15, y: 11}
+      - {x: 9, y: 5}
+      - {x: 7, y: 5}
+      - {x: 7, y: -107}
+      - {x: 36, y: -107}
+      - {x: 36, y: -140}
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8f23d091acbfa7f4f97731340d42b473
     internalID: 0
     vertices: []
     indices: 

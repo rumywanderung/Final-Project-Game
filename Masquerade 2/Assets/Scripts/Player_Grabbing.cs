@@ -64,12 +64,40 @@ public class Player_Grabbing : MonoBehaviour
                         Debug.Log("in hand = " + inHand);
                         Debug.Log("in hand position = " + inHandCheck);
                         // replacement
-                        if(manager.NPC.gameObject.name == "Werewolf")
+                        if (manager.NPC.gameObject.name == "Werewolf")
                         {
-                        Debug.Log(manager.NPC.gameObject);
-                        Destroy(manager.NPC.gameObject);
-                        GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
-                        Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
+                            Debug.Log(manager.NPC.gameObject);
+                            Destroy(manager.NPC.gameObject);
+                            GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
+                            Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
+                        }
+                    }
+
+                    if (closeEnough == true && grabbedObject.gameObject.name == "picture")
+                    {
+                        Debug.Log("grabbed = " + grabbedObject);
+
+                        grabbed = true;
+                        GetComponent<Rigidbody>().isKinematic = true;
+                        float posx = handright.transform.position.x;
+                        float posy = handright.transform.position.y;
+                        float posz = handright.transform.position.z;
+                        grabbedObject.position = new Vector3(posx, posy, posz);
+
+                        grabbedObject.transform.parent = handright.transform;
+
+
+                        inHand = grabbedObject.gameObject;
+                        inHandCheck = grabbedObject.gameObject.transform;
+                        Debug.Log("in hand = " + inHand);
+                        Debug.Log("in hand position = " + inHandCheck);
+                        // replacement
+                        if (manager.NPC.gameObject.name == "Vampire")
+                        {
+                            Debug.Log(manager.NPC.gameObject);
+                            Destroy(manager.NPC.gameObject);
+                            GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
+                            Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
                         }
                     }
                 }

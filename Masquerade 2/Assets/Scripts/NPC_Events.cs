@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEditor;
+using VIDE_Data;
 
 public class NPC_Events : MonoBehaviour
 {
@@ -19,15 +20,17 @@ public class NPC_Events : MonoBehaviour
     private bool cmOn = false;
     private float times;
     public Cinemachine.CinemachineVirtualCamera playerCam;
+    //FLAGS
+    public bool handFull = false;
 
     public void Start()
     {
         manager = FindObjectOfType<GameManager>();
+        grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
     }
 
     public void DestroyObject()
     {
-        grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
         Destroy(grabableobject);
     }
 
@@ -43,6 +46,21 @@ public class NPC_Events : MonoBehaviour
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
        
+    }
+
+    public void CheckInHand()
+    {
+        if (grabableobject != null)
+        {
+            handFull = true;
+            Debug.Log(handFull); ///////////////////goes into False but still plays dialogue: we need to stop it!!!!
+        }
+        else
+        {
+            handFull = false;
+            Debug.Log(handFull);
+            VD.nodeData.pausedAction = true;
+        }
     }
 
     public void Update()
