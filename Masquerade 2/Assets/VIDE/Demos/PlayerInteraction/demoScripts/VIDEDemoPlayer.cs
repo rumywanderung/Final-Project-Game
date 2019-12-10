@@ -17,9 +17,14 @@ public class VIDEDemoPlayer : MonoBehaviour
     public Camera cams;
     public float speedH = 2.0F;
     public float speedV = 2.0F;
-    private float yaw = 0.0f;
-    private float pitch = 0.0f;
+    public float yaw = 0.0f;
+    public float pitch = 0.0f;
 
+    //jump things
+    /*private bool canJump = false;
+    public float ForceConst;
+    private Rigidbody rb;
+    */
     //public Animator blue;
 
     //Stored current VA when inside a trigger
@@ -45,7 +50,7 @@ public class VIDEDemoPlayer : MonoBehaviour
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
+        //rb = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -55,6 +60,16 @@ public class VIDEDemoPlayer : MonoBehaviour
 
         cams.transform.eulerAngles = new Vector3(0, yaw, 0.0f);
         this.transform.eulerAngles = new Vector3(0, yaw, 0.0f);
+
+        //jump
+
+        //rb.angularVelocity = new Vector3(0, 0, 0);
+
+        if (Input.GetKeyUp("c"))
+        {
+            Debug.Log(" in update");
+            //canJump = true;
+        }
 
         //Only allow player to move and turn if there are no dialogs loaded
         if (!VD.isActive)
@@ -66,7 +81,6 @@ public class VIDEDemoPlayer : MonoBehaviour
             transform.position += transform.forward * 10 * move * Time.deltaTime;
             transform.position += transform.right * 10 * movebis * Time.deltaTime;
             //blue.SetFloat("speed", move);
-
         }
 
         //Interact with NPCs when pressing E
@@ -118,4 +132,15 @@ public class VIDEDemoPlayer : MonoBehaviour
             }
         }
     }
+
+    /*private void FixedUpdate()
+    {
+        if (canJump)
+        {
+            Debug.Log(" in Fixedupdate");
+            canJump = false;
+            rb.AddForce(0, ForceConst, 0, ForceMode.Impulse);
+        }
+    }*/
+    
 }

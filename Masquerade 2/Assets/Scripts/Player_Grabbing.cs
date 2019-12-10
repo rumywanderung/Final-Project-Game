@@ -8,9 +8,10 @@ public class Player_Grabbing : MonoBehaviour
     public bool closeEnough = false;
     public GameObject inHand;
     [HideInInspector]
-    public GameObject inHandCheck;
+    public Transform inHandCheck;
     public Transform grabbedObject = null;
-    public Transform playerCam;
+    //public Transform playerCam;
+    public GameObject handright;
     public GameManager manager;
 
     private void OnCollisionEnter(Collision collision)
@@ -40,25 +41,35 @@ public class Player_Grabbing : MonoBehaviour
         {
             float dist = Vector3.Distance(grabbedObject.gameObject.transform.position, this.transform.position);
 
-            if (dist <= 2.5F)
+            if (dist <= 5F)
             {
                 if (Input.GetKeyUp("g"))
                 {
-                    if (closeEnough == true)
+                    if (closeEnough == true && grabbedObject.gameObject.name == "wine")
                     {
-                        Debug.Log("grabbed");
+                        Debug.Log("grabbed = " + grabbedObject);
+
                         grabbed = true;
                         GetComponent<Rigidbody>().isKinematic = true;
-                        grabbedObject.transform.parent = playerCam;
+                        float posx = handright.transform.position.x;
+                        float posy = handright.transform.position.y;
+                        float posz = handright.transform.position.z;
+                        grabbedObject.position = new Vector3(posx, posy, posz);
+
+                        grabbedObject.transform.parent = handright.transform;
+
+
                         inHand = grabbedObject.gameObject;
-
-                        if (grabbedObject.gameObject.name == "wine")
-                        {   //guestA (name) without wine is destroyed
-                            Debug.Log("WINE");
-
-                            Destroy(manager.NPC.gameObject.transform.GetChild(0).gameObject);
-                            GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
-                            Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
+                        inHandCheck = grabbedObject.gameObject.transform;
+                        Debug.Log("in hand = " + inHand);
+                        Debug.Log("in hand position = " + inHandCheck);
+                        // replacement
+                        if(manager.NPC.gameObject.name == "Werewolf")
+                        {
+                        Debug.Log(manager.NPC.gameObject);
+                        Destroy(manager.NPC.gameObject);
+                        GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
+                        Instantiate(Guest, new Vector3(-7.579987F, 0.8F, -7.86F), Quaternion.identity);
                         }
                     }
                 }

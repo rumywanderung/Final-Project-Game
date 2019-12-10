@@ -11,7 +11,7 @@ public class NPC_Events : MonoBehaviour
     GameObject grabableobject;
     //cameraEvent
     public Cinemachine.CinemachineVirtualCamera Cam;
-    public Cinemachine.CinemachineVirtualCamera Cam2;
+    //public Cinemachine.CinemachineVirtualCamera Cam2;
     public GameObject LookAts;
     public GameObject Cue;
     public GameObject dollycart;

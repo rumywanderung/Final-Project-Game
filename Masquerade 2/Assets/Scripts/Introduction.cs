@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using VIDE_Data;
 
 public class Introduction : MonoBehaviour
 {
-    public GameObject Player;
+    public VIDEDemoPlayer Player;
     public GameObject intro00;
     public GameObject intro01;
     private bool inTrigger = false;
@@ -14,11 +15,14 @@ public class Introduction : MonoBehaviour
     public GameObject particles;
     public AudioSource sfx;
     public AudioClip sfxClip;
+    
 
     private void Awake()
     {
         sfx = GetComponent<AudioSource>();
     }
+
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.name == "CubePlayer")
@@ -45,8 +49,8 @@ public class Introduction : MonoBehaviour
         }
         else if (this.name == "I: 01" && inTrigger == true)
         {
-            GameObject intro = Instantiate(Resources.Load("INTRO 00") as GameObject);
-            intro00 = intro;
+            GameObject intro = Instantiate(Resources.Load("INTRO 01") as GameObject);
+            intro01 = intro;
             inTrigger = false;
             deletion1 = true;
         }
@@ -63,7 +67,7 @@ public class Introduction : MonoBehaviour
         {
             if (Input.GetKeyUp("e"))
             {
-                DestroyObjects(intro00);
+                DestroyObjects(intro01);
                 deletion1 = false;
             }
         }
