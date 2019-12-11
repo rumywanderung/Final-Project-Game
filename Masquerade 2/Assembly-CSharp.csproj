@@ -84,6 +84,7 @@
     <Compile Include="Assets\Scripts\MoveToPoint.cs" />
     <Compile Include="Assets\Scripts\NPC_Events.cs" />
     <Compile Include="Assets\Scripts\NPC_GuestA_1.cs" />
+    <Compile Include="Assets\Scripts\NPCchildren.cs" />
     <Compile Include="Assets\Scripts\Player_DoorActions.cs" />
     <Compile Include="Assets\Scripts\Player_Grabbing.cs" />
     <Compile Include="Assets\VIDE\Data\MiniJSON_VIDE.cs" />

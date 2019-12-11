@@ -498,7 +498,7 @@ Transform:
   m_LocalScale: {x: 0.07050228, y: 0.061730415, z: 0.0075836256}
   m_Children: []
   m_Father: {fileID: 1483710120}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 89.420006, y: -440.72, z: -444.73102}
 --- !u!64 &34119532
 MeshCollider:
@@ -684,15 +684,22 @@ MonoBehaviour:
   - Laura
   - MrCube
   - MyDialogue
-  - NPC1
   - NPC1 - Drink Found
+  - NPCdevil
+  - NPCghost
+  - NPCguard
   - NPCOnly
+  - NPCsatan
+  - NPCunicorn
+  - NPCvampire
+  - NPCwerewolf
+  - NPCwitch
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 11
+  assignedIndex: 12
   assignedID: 96310
-  assignedDialogue: NPC1
+  assignedDialogue: NPCdevil
   interactionCount: 0
   alias: The Devil
   overrideStartNode: -1
@@ -4111,6 +4118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 315923747}
+  - component: {fileID: 315923748}
   m_Layer: 0
   m_Name: NPCs
   m_TagString: Untagged
@@ -4133,10 +4141,29 @@ Transform:
   - {fileID: 1423623472}
   - {fileID: 35827450}
   - {fileID: 1483710120}
-  - {fileID: 870478411}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315923748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315923746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dce54138f928624088c9571d0768f48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Werewolf: {fileID: 2088664940}
+  Vampire: {fileID: 1483710121}
+  Unicorn: {fileID: 35827451}
+  Ghost: {fileID: 0}
+  Witch: {fileID: 0}
+  Dragon: {fileID: 0}
+  Satan: {fileID: 0}
+  Guard: {fileID: 0}
 --- !u!1 &316102424
 GameObject:
   m_ObjectHideFlags: 0
@@ -9843,97 +9870,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &414843284
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 414843285}
-  - component: {fileID: 414843286}
-  m_Layer: 0
-  m_Name: spotlight devil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &414843285
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414843284}
-  m_LocalRotation: {x: 0.5104584, y: -0.48941725, z: 0.492003, w: 0.50777566}
-  m_LocalPosition: {x: 0.22064604, y: -0.17, z: -0.007271886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 35827450}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90.302, y: -0.000015258789, z: -0.000015258789}
---- !u!108 &414843286
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 414843284}
-  m_Enabled: 0
-  serializedVersion: 9
-  m_Type: 0
-  m_Color: {r: 0.764151, g: 0.08197998, b: 0, a: 1}
-  m_Intensity: 17.45
-  m_Range: 9.2
-  m_SpotAngle: 119.6
-  m_InnerSpotAngle: 20.4
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &420513152
 GameObject:
   m_ObjectHideFlags: 0
@@ -14585,6 +14521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 870478411}
   - component: {fileID: 870478412}
+  - component: {fileID: 870478413}
   m_Layer: 0
   m_Name: NPC EVENTS
   m_TagString: Untagged
@@ -14600,11 +14537,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870478410}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -289.6, y: -116.53853, z: 6.4}
+  m_LocalPosition: {x: 3.399994, y: 0.44999695, z: 6.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 315923747}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &870478412
 MonoBehaviour:
@@ -14618,6 +14555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160549ae51f2bff499f4f1c471b43662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1575653239}
   manager: {fileID: 1673865645}
   Cam: {fileID: 0}
   LookAts: {fileID: 1974610696}
@@ -14626,6 +14564,68 @@ MonoBehaviour:
   dollytrack: {fileID: 1487388296}
   playerCam: {fileID: 689653570}
   handFull: 0
+  intrig: {fileID: 870478410}
+  Werewolf: {fileID: 2088664940}
+  Vampire: {fileID: 1483710121}
+  Ghost: {fileID: 0}
+  Unicorn: {fileID: 35827451}
+  Dragon: {fileID: 0}
+  Witch: {fileID: 0}
+  Satan: {fileID: 0}
+  Guard: {fileID: 0}
+--- !u!114 &870478413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870478410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - MyDialogue
+  - NPC1 - Drink Found
+  - NPCdevil
+  - NPCghost
+  - NPCguard
+  - NPCOnly
+  - NPCsatan
+  - NPCunicorn
+  - NPCvampire
+  - NPCwerewolf
+  - NPCwitch
+  - QuestChartDemo
+  - TriggeredDude
+  - Witch
+  assignedIndex: -1
+  assignedID: 0
+  assignedDialogue: 
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 0
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags: []
+  S_actionNodes: []
 --- !u!1 &879784019
 GameObject:
   m_ObjectHideFlags: 0
@@ -16170,97 +16170,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 978256060}
   m_Mesh: {fileID: -1097960246084356550, guid: c75ec4d26845c1040a0bb26749ed880f, type: 3}
---- !u!1 &984852106
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 984852107}
-  - component: {fileID: 984852108}
-  m_Layer: 0
-  m_Name: spotlight devil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &984852107
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984852106}
-  m_LocalRotation: {x: 0.5104584, y: -0.48941725, z: 0.492003, w: 0.50777566}
-  m_LocalPosition: {x: 0.22064604, y: -0.17, z: -0.007271886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1423623472}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90.302, y: -0.000015258789, z: -0.000015258789}
---- !u!108 &984852108
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 984852106}
-  m_Enabled: 0
-  serializedVersion: 9
-  m_Type: 0
-  m_Color: {r: 0.764151, g: 0.08197998, b: 0, a: 1}
-  m_Intensity: 17.45
-  m_Range: 9.2
-  m_SpotAngle: 119.6
-  m_InnerSpotAngle: 20.4
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &987625042
 GameObject:
   m_ObjectHideFlags: 0
@@ -31160,6 +31069,7 @@ Transform:
   - {fileID: 629098536}
   - {fileID: 2077154492}
   - {fileID: 1298641736}
+  - {fileID: 3294334627624460896}
   m_Father: {fileID: 316102425}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31835,15 +31745,22 @@ MonoBehaviour:
   - Laura
   - MrCube
   - MyDialogue
-  - NPC1
   - NPC1 - Drink Found
+  - NPCdevil
+  - NPCghost
+  - NPCguard
   - NPCOnly
+  - NPCsatan
+  - NPCunicorn
+  - NPCvampire
+  - NPCwerewolf
+  - NPCwitch
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 11
-  assignedID: 96310
-  assignedDialogue: NPC1
+  assignedIndex: 18
+  assignedID: 79896
+  assignedDialogue: NPCvampire
   interactionCount: 0
   alias: The Ghost
   overrideStartNode: -1
@@ -31866,12 +31783,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1483710121}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.46
+  m_Radius: 0.99
   m_Height: 2.6
   m_Direction: 1
-  m_Center: {x: 0.15, y: 0.04, z: 0}
+  m_Center: {x: -0.18, y: 0.04, z: -0.12}
 --- !u!54 &1483710125
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -32887,7 +32804,7 @@ Transform:
   m_LocalScale: {x: 0.07050228, y: 0.061730415, z: 0.0075836256}
   m_Children: []
   m_Father: {fileID: 1423623472}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 89.420006, y: -440.72, z: -444.73102}
 --- !u!64 &1564942659
 MeshCollider:
@@ -33244,6 +33161,7 @@ MonoBehaviour:
   grabbedObject: {fileID: 0}
   handright: {fileID: 957082067}
   manager: {fileID: 1673865645}
+  target: {fileID: 0}
 --- !u!114 &1575653246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33263,6 +33181,7 @@ MonoBehaviour:
   speedV: 2
   yaw: 0
   pitch: 0
+  NPC: {fileID: 870478410}
   inTrigger: {fileID: 0}
   demo_Items: []
   demo_ItemInventory: []
@@ -40281,7 +40200,7 @@ Transform:
   m_LocalScale: {x: 0.07050228, y: 0.061730415, z: 0.0075836256}
   m_Children: []
   m_Father: {fileID: 35827450}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 89.420006, y: -440.72, z: -444.73102}
 --- !u!64 &1756249760
 MeshCollider:
@@ -50919,8 +50838,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845094477}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -287.48, y: -116.15, z: 31.880001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -287.48, y: -113.63, z: 31.880001}
+  m_LocalScale: {x: 1, y: 4.6989, z: 1}
   m_Children: []
   m_Father: {fileID: 315923747}
   m_RootOrder: 0
@@ -50949,19 +50868,26 @@ MonoBehaviour:
   - Laura
   - MrCube
   - MyDialogue
-  - NPC1
   - NPC1 - Drink Found
+  - NPCdevil
+  - NPCghost
+  - NPCguard
   - NPCOnly
+  - NPCsatan
+  - NPCunicorn
+  - NPCvampire
+  - NPCwerewolf
+  - NPCwitch
   - QuestChartDemo
   - TriggeredDude
   - Witch
   assignedIndex: 11
-  assignedID: 96310
-  assignedDialogue: NPC1
+  assignedID: 5244
+  assignedDialogue: NPC1 - Drink Found
   interactionCount: 21
   alias: Guest A
   overrideStartNode: 0
-  defaultNPCSprite: {fileID: 21300000, guid: 5c2766a8818a8e4478d7da2bba190ac6, type: 3}
+  defaultNPCSprite: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: 84a9114ab28f94e469a62b9feae04bf0,
     type: 3}
   targetManager: {fileID: 0}
@@ -51655,97 +51581,6 @@ Transform:
   m_Father: {fileID: 977253982}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1912308510
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1912308511}
-  - component: {fileID: 1912308512}
-  m_Layer: 0
-  m_Name: spotlight devil
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1912308511
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912308510}
-  m_LocalRotation: {x: 0.5104584, y: -0.48941725, z: 0.492003, w: 0.50777566}
-  m_LocalPosition: {x: 0.22064604, y: -0.17, z: -0.007271886}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1483710120}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90.302, y: -0.000015258789, z: -0.000015258789}
---- !u!108 &1912308512
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912308510}
-  m_Enabled: 0
-  serializedVersion: 9
-  m_Type: 0
-  m_Color: {r: 0.764151, g: 0.08197998, b: 0, a: 1}
-  m_Intensity: 17.45
-  m_Range: 9.2
-  m_SpotAngle: 119.6
-  m_InnerSpotAngle: 20.4
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
 --- !u!1 &1912950797
 GameObject:
   m_ObjectHideFlags: 0
@@ -54211,20 +54046,27 @@ MonoBehaviour:
   - Laura
   - MrCube
   - MyDialogue
-  - NPC1
   - NPC1 - Drink Found
+  - NPCdevil
+  - NPCghost
+  - NPCguard
   - NPCOnly
+  - NPCsatan
+  - NPCunicorn
+  - NPCvampire
+  - NPCwerewolf
+  - NPCwitch
   - QuestChartDemo
   - TriggeredDude
   - Witch
-  assignedIndex: 11
-  assignedID: 96310
-  assignedDialogue: NPC1
+  assignedIndex: 19
+  assignedID: 72891
+  assignedDialogue: NPCwerewolf
   interactionCount: 0
   alias: The Vampire
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
-  defaultPlayerSprite: {fileID: 21300000, guid: 5c2766a8818a8e4478d7da2bba190ac6,
+  defaultNPCSprite: {fileID: 21300000, guid: b7338a575f57ff14197df3e36d3af5af, type: 3}
+  defaultPlayerSprite: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518,
     type: 3}
   targetManager: {fileID: 0}
   preload: 0
@@ -54242,12 +54084,12 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2088664940}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.46
+  m_Radius: 1.19
   m_Height: 2.6
   m_Direction: 1
-  m_Center: {x: 0.15, y: 0.04, z: 0}
+  m_Center: {x: -0.04, y: 0.04, z: -0.42}
 --- !u!1 &2099629771
 GameObject:
   m_ObjectHideFlags: 0
@@ -54728,7 +54570,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953,
+      objectReference: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518,
         type: 3}
     - target: {fileID: 752106632223817987, guid: 5d14ae31d6c474c41b17590166fa4490,
         type: 3}
@@ -55114,11 +54956,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3294334627624566336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.6, y: 0.031558514, z: 161.8}
+  m_LocalPosition: {x: -2.5894165, y: -1.7261505, z: -0.8089905}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 1441503501}
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &3294334627624460900
 Transform:

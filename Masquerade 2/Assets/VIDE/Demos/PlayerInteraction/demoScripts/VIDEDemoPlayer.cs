@@ -19,6 +19,7 @@ public class VIDEDemoPlayer : MonoBehaviour
     public float speedV = 2.0F;
     public float yaw = 0.0f;
     public float pitch = 0.0f;
+    public GameObject NPC;
 
     //jump things
     /*private bool canJump = false;
@@ -43,13 +44,14 @@ public class VIDEDemoPlayer : MonoBehaviour
 
     void OnTriggerExit()
     {
-        inTrigger = null;
+        //inTrigger = null;
     }
 
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        inTrigger = NPC.GetComponent<VIDE_Assign>();
         //rb = GetComponent<Rigidbody>();
     }
 

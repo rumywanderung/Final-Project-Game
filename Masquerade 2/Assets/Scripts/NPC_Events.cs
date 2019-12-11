@@ -7,6 +7,7 @@ using VIDE_Data;
 
 public class NPC_Events : MonoBehaviour
 {
+    public GameObject Player;
     //destroyObject
     public GameManager manager;
     GameObject grabableobject;
@@ -22,6 +23,17 @@ public class NPC_Events : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera playerCam;
     //FLAGS
     public bool handFull = false;
+    //
+    public GameObject intrig;
+
+    public GameObject Werewolf;
+    public GameObject Vampire;
+    public GameObject Ghost;
+    public GameObject Unicorn;
+    public GameObject Dragon;
+    public GameObject Witch;
+    public GameObject Satan;
+    public GameObject Guard;
 
     public void Start()
     {
@@ -31,7 +43,8 @@ public class NPC_Events : MonoBehaviour
 
     public void DestroyObject()
     {
-        Destroy(grabableobject);
+        Debug.Log("DestroyObject()");
+        Destroy(grabableobject.gameObject);
     }
 
     public void CameraEvent()
@@ -53,20 +66,86 @@ public class NPC_Events : MonoBehaviour
         if (grabableobject != null)
         {
             handFull = true;
-            Debug.Log(handFull); ///////////////////goes into False but still plays dialogue: we need to stop it!!!!
+            Debug.Log(handFull);
+            Debug.Log(Player.GetComponent<Player_Grabbing>().target.gameObject);
+            //targets = objet en main destiné à qui ?
+            intrig = Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject;
+            // wine
+            if (Player.GetComponent<Player_Grabbing>().target.gameObject == Werewolf)
+            {
+                //qui est le NPC ?
+                Debug.Log("i have wine in my hand");
+
+                // werewolf (wine)
+                if (intrig == Werewolf)
+                {
+                    Debug.Log("im talking to Werewolf");
+                    DestroyObject();
+                }
+                // vampire
+                else if (intrig == Vampire)
+                {
+                    Debug.Log("im talking to Vampire");
+                    VD.SetNode(22);
+                }
+                else if (intrig == null)
+                {
+                    //
+                }
+            }
+
+               // picture
+            if (Player.GetComponent<Player_Grabbing>().target.gameObject == Vampire)
+            {
+
+                Debug.Log("i have a picture in my hand");
+                // werewolf
+                if (intrig == Werewolf)
+                {
+                    Debug.Log("im talking to Werewolf");
+                    VD.SetNode(22);
+                }
+                // vampire (picture)
+                else if (intrig == Vampire)
+                {
+                    Debug.Log("im talking to Vampire");
+                    DestroyObject();
+                }
+                else if (intrig == null)
+                {
+                    //
+                }
+
+            }
+
+            else if (Player.GetComponent<Player_Grabbing>().target.gameObject == null)
+            {
+                Debug.Log("no object in hand");
+            }
         }
         else
         {
             handFull = false;
-            Debug.Log(handFull);
-            VD.nodeData.pausedAction = true;
+            //Debug.Log(handFull);
+            VD.SetNode(22);
         }
     }
 
     public void Update()
     {
-        if (cmOn == true)
+        /*if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject == null) {
+
+            //
+        }
+        else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject != null)
         {
+           intrig = Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject;
+        }*/
+
+        grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
+
+        if (cmOn == true)
+        {///// camera event
             if (times < 15)
             {
                 times += Time.deltaTime;
