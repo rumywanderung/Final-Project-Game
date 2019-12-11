@@ -41,7 +41,7 @@ public class Player_Grabbing : MonoBehaviour
         {
             float dist = Vector3.Distance(grabbedObject.gameObject.transform.position, this.transform.position);
 
-            if (dist <= 5F)
+            if (dist <= 99999999999999999999999999999999999999F)
             {
                 if (Input.GetKeyUp("g"))
                 {
@@ -50,19 +50,18 @@ public class Player_Grabbing : MonoBehaviour
                         Debug.Log("grabbed = " + grabbedObject);
 
                         grabbed = true;
-                        GetComponent<Rigidbody>().isKinematic = true;
-                        float posx = handright.transform.position.x;
-                        float posy = handright.transform.position.y;
-                        float posz = handright.transform.position.z;
-                        grabbedObject.position = new Vector3(posx, posy, posz);
-
                         grabbedObject.transform.parent = handright.transform;
-
 
                         inHand = grabbedObject.gameObject;
                         inHandCheck = grabbedObject.gameObject.transform;
                         Debug.Log("in hand = " + inHand);
                         Debug.Log("in hand position = " + inHandCheck);
+                        inHand.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                        inHand.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        float posx = handright.transform.position.x - 0.5F;
+                        float posy = handright.transform.position.y;
+                        float posz = handright.transform.position.z - 0.5F;
+                        grabbedObject.position = new Vector3(posx, posy, posz);
                         // replacement
                         if (manager.NPC.gameObject.name == "Werewolf")
                         {
@@ -78,22 +77,22 @@ public class Player_Grabbing : MonoBehaviour
                         Debug.Log("grabbed = " + grabbedObject);
 
                         grabbed = true;
-                        GetComponent<Rigidbody>().isKinematic = true;
-                        float posx = handright.transform.position.x;
-                        float posy = handright.transform.position.y;
-                        float posz = handright.transform.position.z;
-                        grabbedObject.position = new Vector3(posx, posy, posz);
-
                         grabbedObject.transform.parent = handright.transform;
-
 
                         inHand = grabbedObject.gameObject;
                         inHandCheck = grabbedObject.gameObject.transform;
                         Debug.Log("in hand = " + inHand);
                         Debug.Log("in hand position = " + inHandCheck);
+                        inHand.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                        inHand.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        float posx = handright.transform.position.x;
+                        float posy = handright.transform.position.y;
+                        float posz = handright.transform.position.z;
+                        grabbedObject.position = new Vector3(posx, posy, posz);
                         // replacement
                         if (manager.NPC.gameObject.name == "Vampire")
                         {
+                            Debug.Log("Vampire");
                             Debug.Log(manager.NPC.gameObject);
                             Destroy(manager.NPC.gameObject);
                             GameObject Guest = Resources.Load("GUEST A (1)") as GameObject;
