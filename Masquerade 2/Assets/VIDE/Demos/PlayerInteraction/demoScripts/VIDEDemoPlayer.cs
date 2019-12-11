@@ -44,14 +44,14 @@ public class VIDEDemoPlayer : MonoBehaviour
 
     void OnTriggerExit()
     {
-        //inTrigger = null;
+        inTrigger = null;
     }
 
     void Start()
     {
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        inTrigger = NPC.GetComponent<VIDE_Assign>();
+        //inTrigger = NPC.GetComponent<VIDE_Assign>();
         //rb = GetComponent<Rigidbody>();
     }
 
