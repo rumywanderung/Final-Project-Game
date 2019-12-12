@@ -10,31 +10,34 @@ public class GUIManager : MonoBehaviour
 
     private void Start()
     {
-        //talkPopup = Resources.Load("CanvasTalk") as GameObject;
-       // Instantiate(talkPopup, new Vector3(0, 0, 0), Quaternion.identity);
-       // talkPopup.SetActive(false);
+        talkPopup = Instantiate(Resources.Load("CanvasTalk")) as GameObject;
+       
+        talkPopup.SetActive(false);
+        talkPopup.transform.Find("Text").gameObject.SetActive(false);
        // Debug.Log(talkPopup.activeInHierarchy);
     }
 
     void Update()
     {
-       /* if (Player.GetComponent<VIDEDemoPlayer>().inTrigger != null && talkPopup.activeInHierarchy == false)
+       if (Player.GetComponent<VIDEDemoPlayer>().inTrigger != null && talkPopup.activeInHierarchy == false)
         {
             talkPopup.SetActive(true);
+            talkPopup.transform.Find("Text").gameObject.SetActive(true);
             Debug.Log(talkPopup);
             return;
         }
         else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger == null && talkPopup.activeInHierarchy == true)
         {
             talkPopup.SetActive(false);
+            talkPopup.transform.Find("Text").gameObject.SetActive(false);
             Debug.Log("trigger empty");
             return;
         }
         else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger == null && talkPopup.activeInHierarchy == false)
         {
-            talkPopup.SetActive(false);
+           /* talkPopup.SetActive(false);
             Debug.Log("both null");
-            return;
+            return;*/
         }
         /*else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger != null && talkPopup != null)
         {
