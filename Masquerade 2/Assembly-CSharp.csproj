@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\ButtonMenu.cs" />
     <Compile Include="Assets\Scripts\cameraCam.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GUIManager.cs" />
     <Compile Include="Assets\Scripts\Intro_AddText.cs" />
     <Compile Include="Assets\Scripts\Intro_Canvas.cs" />
     <Compile Include="Assets\Scripts\Introduction.cs" />

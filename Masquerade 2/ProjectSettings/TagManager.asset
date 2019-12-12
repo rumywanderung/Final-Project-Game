@@ -15,6 +15,7 @@ TagManager:
   - cue
   - info
   - hand
+  - CanvasTalk
   layers:
   - Default
   - TransparentFX

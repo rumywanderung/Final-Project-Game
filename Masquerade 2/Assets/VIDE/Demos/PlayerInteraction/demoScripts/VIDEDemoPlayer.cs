@@ -21,6 +21,9 @@ public class VIDEDemoPlayer : MonoBehaviour
     public float pitch = 0.0f;
     public GameObject NPC;
 
+    //FLAG
+    public bool triggeredplayer = false;
+
     //jump things
     /*private bool canJump = false;
     public float ForceConst;

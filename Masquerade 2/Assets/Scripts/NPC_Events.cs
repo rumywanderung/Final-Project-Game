@@ -12,7 +12,7 @@ public class NPC_Events : MonoBehaviour
     public GameManager manager;
     GameObject grabableobject;
     //cameraEvent
-    public Cinemachine.CinemachineVirtualCamera Cam;
+    private Cinemachine.CinemachineVirtualCamera Cam;
     //public Cinemachine.CinemachineVirtualCamera Cam2;
     public GameObject LookAts;
     public GameObject Cue;
@@ -23,6 +23,7 @@ public class NPC_Events : MonoBehaviour
     public Cinemachine.CinemachineVirtualCamera playerCam;
     //FLAGS
     public bool handFull = false;
+    public bool wineGiven = false;
     //
     public GameObject intrig;
 
@@ -47,10 +48,10 @@ public class NPC_Events : MonoBehaviour
         Destroy(grabableobject.gameObject);
     }
 
-    public void CameraEvent()
+    public void CameraEventWerewolf()
     {
         cmOn = true;
-       
+        //Player.SetActive(false);
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
         Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
         Cam.m_Follow = dollycart.transform;
@@ -59,6 +60,20 @@ public class NPC_Events : MonoBehaviour
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
        
+    }
+
+    public void CameraEventVampire()
+    {
+        cmOn = true;
+        //Player.SetActive(false);
+        dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
+        Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
+        Cam.m_Follow = dollycart.transform;
+        Cam.m_LookAt = LookAts.transform;
+
+        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
+        Debug.Log(Cam.Follow);
+
     }
 
     public void CheckInHand()
@@ -79,8 +94,10 @@ public class NPC_Events : MonoBehaviour
                 // werewolf (wine)
                 if (intrig == Werewolf)
                 {
-                    Debug.Log("im talking to Werewolf");
-                    DestroyObject();
+                        Debug.Log("im talking to Werewolf");
+                        DestroyObject();
+                        wineGiven = true;
+                        VD.SetNode(25); 
                 }
                 // vampire
                 else if (intrig == Vampire)
@@ -126,8 +143,15 @@ public class NPC_Events : MonoBehaviour
         else
         {
             handFull = false;
-            //Debug.Log(handFull);
-            VD.SetNode(22);
+
+            if (wineGiven == true)
+            {
+                VD.SetNode(21);
+            }
+            else if (wineGiven == false)
+            {
+                VD.SetNode(24);
+            }
         }
     }
 
@@ -146,18 +170,21 @@ public class NPC_Events : MonoBehaviour
 
         if (cmOn == true)
         {///// camera event
-            if (times < 15)
+            if (times < 5)
             {
                 times += Time.deltaTime;
                 Debug.Log(times);
 
-                if (times >= 15 && Cam != null && dollycart != null)
+                if (times >= 5 && Cam != null && dollycart != null)
                 {
                     Debug.Log("timer ends");
                     /*Destroy(dollycart.gameObject);
                     dollytrack = (GameObject)Instantiate(Resources.Load("DollyTrack2", typeof(GameObject)));*/
                     Destroy(Cam.gameObject);
+                    Destroy(dollycart.gameObject);
+                    //Player.SetActive(true);
                     CinemachineBrain.SoloCamera = playerCam;
+                    cmOn = false;
 }
             }
         }
