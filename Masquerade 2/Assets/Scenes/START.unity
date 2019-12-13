@@ -438,7 +438,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc2c041e3f758d41be98317689c06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Canvas: {fileID: 0}
+  Canvas: {fileID: 3634015481632995038, guid: f47c4035f5fa4224a887a852aa0c949d, type: 3}
+  title: {fileID: 2748298667754535144, guid: b9f9ff01c52cc36468201f4489c5e78d, type: 3}
   i: 0
 --- !u!4 &904222578
 Transform:

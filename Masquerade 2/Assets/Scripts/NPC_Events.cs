@@ -59,6 +59,8 @@ public class NPC_Events : MonoBehaviour
 
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
+
+        /////Instantiate a trigger where player can walk and here something (maybe mark it with an X)
        
     }
 

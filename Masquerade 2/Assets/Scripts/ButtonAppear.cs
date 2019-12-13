@@ -12,11 +12,13 @@ public class ButtonAppear : MonoBehaviour
     private GameObject CanvasButtons;
 
     public ButtonMenu Canvas;
+    public GameObject title;
     public float i = 0;
 
     void Start()
     {
         CanvasButtons = (GameObject)Resources.Load("CanvasButtons");
+        //title = (GameObject)Resources.Load("CanvasImg");
     }
     
     void Update()
@@ -27,7 +29,9 @@ public class ButtonAppear : MonoBehaviour
         }
         else if (i >= 8)
         {
+           // Instantiate(title);
             Instantiate(CanvasButtons);
+            
             if (CanvasButtons.GetComponentInChildren<Button>().name == "ButtonStart")
             {
                 buttonStart = CanvasButtons.GetComponentInChildren<Button>();
