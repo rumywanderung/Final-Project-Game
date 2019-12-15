@@ -4,6 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using UnityEditor;
 using VIDE_Data;
+using UnityEngine.UI;
 
 public class NPC_Events : MonoBehaviour
 {
@@ -36,10 +37,20 @@ public class NPC_Events : MonoBehaviour
     public GameObject Satan;
     public GameObject Guard;
 
+    //CHAOS
+
+    public float ChaosPoint;
+    public string ChaosPointText;
+
     public void Start()
     {
         manager = FindObjectOfType<GameManager>();
         grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
+    }
+
+    public void OnGUI()
+    {
+        GUI.Box(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
     }
 
     public void DestroyObject()
@@ -157,8 +168,16 @@ public class NPC_Events : MonoBehaviour
         }
     }
 
+    public void AddChaos()
+    {
+        ChaosPoint += 1;
+    }
+
     public void Update()
     {
+
+        ChaosPointText = "Chaos: " + ChaosPoint;
+
         /*if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject == null) {
 
             //
@@ -189,6 +208,11 @@ public class NPC_Events : MonoBehaviour
                     cmOn = false;
 }
             }
+        }
+
+        if (ChaosPoint == 3)
+        {
+            Debug.Log("GAME OVER");
         }
     }
 }
