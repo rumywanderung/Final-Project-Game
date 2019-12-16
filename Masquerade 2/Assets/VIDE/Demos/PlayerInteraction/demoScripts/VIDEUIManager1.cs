@@ -149,7 +149,7 @@ public class VIDEUIManager1 : MonoBehaviour
                 for (int i = 0; i < currentChoices.Count; i++)
                 {
                     currentChoices[i].color = Color.white;
-                    if (i == data.commentIndex) currentChoices[i].color = Color.grey;
+                    if (i == data.commentIndex) currentChoices[i].color = Color.green;
                 }
             }
         }
@@ -374,7 +374,7 @@ public class VIDEUIManager1 : MonoBehaviour
             //Checks for extraData that concerns font size (CrazyCap node 2)
             if (data.extraData[data.commentIndex].Contains("fs"))
             {
-                int fSize = 14;
+                int fSize = 1;
 
                 string[] fontSize = data.extraData[data.commentIndex].Split(","[0]);
                 int.TryParse(fontSize[1], out fSize);
@@ -382,7 +382,7 @@ public class VIDEUIManager1 : MonoBehaviour
             }
             else
             {
-                NPC_Text.fontSize = 14;
+                NPC_Text.fontSize = 16;
             }
         }
     }

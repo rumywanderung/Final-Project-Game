@@ -24,6 +24,8 @@ public class VIDEDemoPlayer : MonoBehaviour
     //FLAG
     public bool triggeredplayer = false;
     public static bool trigger_lookat1 = false;
+    public static bool trigger_lookat2 = false;
+    public static bool trigger_lookat3 = false;
 
     //jump things
     /*private bool canJump = false;
@@ -52,6 +54,20 @@ public class VIDEDemoPlayer : MonoBehaviour
             audio.Play();
             trigger_lookat1 = true;
         }
+        else if (other.name == "trig_LookAt2")
+        {
+            //audio starts
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
+            trigger_lookat2 = true;
+        }
+        else if (other.name == "trig_LookAt3")
+        {
+            //audio starts
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
+            trigger_lookat3 = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -65,7 +81,22 @@ public class VIDEDemoPlayer : MonoBehaviour
             audio.Stop();
             trigger_lookat1 = false;
         }
-       
+        else if (other.name == "trig_LookAt2")
+        {
+            //audio stops
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Stop();
+            trigger_lookat2 = false;
+        }
+
+        else if (other.name == "trig_LookAt3")
+        {
+            //audio stops
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Stop();
+            trigger_lookat3 = false;
+        }
+
     }
 
     void Start()

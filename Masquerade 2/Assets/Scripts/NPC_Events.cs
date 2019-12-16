@@ -14,18 +14,25 @@ public class NPC_Events : MonoBehaviour
     public GUIManager GUIManager1;
     GameObject grabableobject;
     //cameraEvent
-    private Cinemachine.CinemachineVirtualCamera Cam;
-    //public Cinemachine.CinemachineVirtualCamera Cam2;
+    private Cinemachine.CinemachineVirtualCamera Cam1;
+    private Cinemachine.CinemachineVirtualCamera Cam2;
+    private Cinemachine.CinemachineVirtualCamera Cam3;
     public GameObject LookAts1;
+    public GameObject LookAts2;
+    public GameObject LookAts3;
     //public GameObject Cue1;
     public GameObject dollycart;
-    public Cinemachine.CinemachineSmoothPath dollytrack;
+    public Cinemachine.CinemachineSmoothPath dollytrack1;
+    public Cinemachine.CinemachineSmoothPath dollytrack2;
+    public Cinemachine.CinemachineSmoothPath dollytrack3;
     private bool cmOn = false;
     private float times;
     public Cinemachine.CinemachineVirtualCamera playerCam;
     //FLAGS
     public bool handFull = false;
     public bool wineGiven = false;
+    public bool picGiven = false;
+    public bool boxGiven = false;
     //
     public GameObject intrig;
     //
@@ -62,13 +69,15 @@ public class NPC_Events : MonoBehaviour
         Clue1Text = "Clue #1: " + Clue1;
         Clue2Text = "Clue #2: " + Clue2;
         Clue3Text = "Clue #3: " + Clue3;
+
+        LookAts1.SetActive(false);
+        LookAts2.SetActive(false);
+        LookAts3.SetActive(false);
     }
 
     public void OnGUI()
     {
         GUI.TextArea(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
-        //GUI.Box(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
-        //GUI.Box(new Rect(10, 40, 100, 20), Clue1Text.ToString());
         GUI.TextArea(new Rect(10, 40, 500, 20), Clue1Text.ToString());
         GUI.TextArea(new Rect(10, 70, 500, 20), Clue2Text.ToString());
         GUI.TextArea(new Rect(10, 100, 500, 20), Clue3Text.ToString());
@@ -86,39 +95,54 @@ public class NPC_Events : MonoBehaviour
     public void CameraEventWerewolf()
     {
         cmOn = true;
-        //Player.SetActive(false);
+        LookAts1.SetActive(true);
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
-        Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
-        Cam.m_Follow = dollycart.transform;
-        Cam.m_LookAt = LookAts1.transform;
-        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
-        Debug.Log(Cam.Follow);
+        Cam1 = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
+        CinemachineBrain.SoloCamera = Cam1;
+        Cam1.m_Follow = dollycart.transform;
+        Cam1.m_LookAt = LookAts1.transform;
+        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack1.GetComponent<CinemachineSmoothPath>();
+        
     }
     //camera VAMPIRE
     public void CameraEventVampire()
     {
         cmOn = true;
-        //Player.SetActive(false);
+        LookAts2.SetActive(true);
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
-        Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
-        Cam.m_Follow = dollycart.transform;
-        Cam.m_LookAt = LookAts1.transform;
-
-        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
-        Debug.Log(Cam.Follow);
-
+        Cam2 = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
+        CinemachineBrain.SoloCamera = Cam2;
+        Cam2.m_Follow = dollycart.transform;
+        Cam2.m_LookAt = LookAts2.transform;
+        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack2.GetComponent<CinemachineSmoothPath>();
+       
+    }
+    //camera DRAGON
+    public void CameraEventDragon()
+    {
+        cmOn = true;
+        LookAts3.SetActive(true);
+        dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
+        Cam3 = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
+        CinemachineBrain.SoloCamera = Cam3;
+        Cam3.m_Follow = dollycart.transform;
+        Cam3.m_LookAt = LookAts3.transform;
+        dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack3.GetComponent<CinemachineSmoothPath>();
+        
     }
 
     public void CheckInHand()
     {
+        intrig = Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject;
+
         if (grabableobject != null)
         {
             handFull = true;
             Debug.Log(handFull);
             Debug.Log(Player.GetComponent<Player_Grabbing>().target.gameObject);
-            //targets = objet en main destiné à qui ?
-            intrig = Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject;
-            // wine
+            //targets = objet en main destiné 
+
+            // WINE
             if (Player.GetComponent<Player_Grabbing>().target.gameObject == Werewolf)
             {
                 //qui est le NPC ?
@@ -127,15 +151,13 @@ public class NPC_Events : MonoBehaviour
                 // werewolf (wine)
                 if (intrig == Werewolf)
                 {
-                        Debug.Log("im talking to Werewolf");
                         DestroyObject();
                         wineGiven = true;
                         VD.SetNode(25); 
                 }
                 // vampire
-                else if (intrig == Vampire)
+                else if (intrig == Vampire || intrig == Dragon || intrig == Unicorn || intrig == Ghost || intrig == Witch)
                 {
-                    Debug.Log("im talking to Vampire");
                     VD.SetNode(22);
                 }
                 else if (intrig == null)
@@ -144,47 +166,88 @@ public class NPC_Events : MonoBehaviour
                 }
             }
 
-               // picture
+            // PIC
             if (Player.GetComponent<Player_Grabbing>().target.gameObject == Vampire)
             {
 
                 Debug.Log("i have a picture in my hand");
                 // werewolf
-                if (intrig == Werewolf)
+                if (intrig == Werewolf || intrig == Dragon || intrig == Unicorn || intrig == Ghost || intrig == Witch)
                 {
-                    Debug.Log("im talking to Werewolf");
                     VD.SetNode(22);
                 }
                 // vampire (picture)
                 else if (intrig == Vampire)
                 {
-                    Debug.Log("im talking to Vampire");
                     DestroyObject();
+                    picGiven = true;
+                    VD.SetNode(21);
                 }
                 else if (intrig == null)
                 {
                     //
                 }
-
             }
+            
+            // TREASUREBOX
+            if (Player.GetComponent<Player_Grabbing>().target.gameObject == Dragon)
+                {
 
+                    Debug.Log("i have a treasure box in my hand");
+
+                    if (intrig == Werewolf || intrig == Vampire || intrig == Unicorn || intrig == Ghost || intrig == Witch)
+                    {
+                        VD.SetNode(22);
+                    }
+                    // dragon (box)
+                    else if (intrig == Dragon)
+                    {
+                        DestroyObject();
+                        boxGiven = true;
+                        VD.SetNode(21);
+                }
+                    else if (intrig == null)
+                    {
+                        //
+                    }
+                }
             else if (Player.GetComponent<Player_Grabbing>().target.gameObject == null)
             {
                 Debug.Log("no object in hand");
             }
         }
-        else
+
+        else if (grabableobject == null)
         {
             handFull = false;
-
-            if (wineGiven == true)
-            {
-                VD.SetNode(21);
-            }
-            else if (wineGiven == false)
-            {
-                VD.SetNode(24);
-            }
+            Debug.Log(handFull);
+            
+                if (intrig == Werewolf && wineGiven == true)
+                {
+                    VD.SetNode(21);
+                }
+                else if (intrig == Werewolf && wineGiven == false)
+                {
+                    VD.SetNode(22);
+                }
+            
+                else if (intrig == Vampire && picGiven == true)
+                {
+                    VD.SetNode(25);
+                }
+                else if (intrig == Vampire && picGiven == false)
+                {
+                    Debug.Log("vaaaamp");
+                    VD.SetNode(3);
+                }
+                if (intrig == Dragon && boxGiven == true)
+                {
+                    VD.SetNode(1);
+                }
+                else if (intrig == Dragon && boxGiven == false)
+                {
+                    VD.SetNode(22);
+                }
         }
     }
 
@@ -204,28 +267,44 @@ public class NPC_Events : MonoBehaviour
         //check inhand
         grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
         //camera moving = true
-        if (cmOn == true)
+        if (cmOn == true && intrig == Werewolf)
         {
-            GUIManager1.talkPopup.SetActive(false);
+            //GUIManager1.talkPopup.SetActive(false);
 
-            if (times < 9)
+            if (times < 8)
             {
                 times += Time.deltaTime;
-                
+
                 Debug.Log(times);
 
-                if (times >= 9 && Cam != null && dollycart != null)
+                if (times >= 8 && Cam1 != null && dollycart != null)
                 {
                     Debug.Log("timer ends");
-                    /*Destroy(dollycart.gameObject);
-                    dollytrack = (GameObject)Instantiate(Resources.Load("DollyTrack2", typeof(GameObject)));*/
-                    Destroy(Cam.gameObject);
-                    Destroy(dollycart.gameObject);
-                    //Player.SetActive(true);
                     CinemachineBrain.SoloCamera = playerCam;
+                    Destroy(Cam1.gameObject);
+                    Destroy(dollycart.gameObject);
                     cmOn = false;
-                    GUIManager1.talkPopup.SetActive(true);
-                }                   
+                    //GUIManager1.talkPopup.SetActive(true);
+                }
+            }
+        }
+        else if (cmOn == true && intrig == Vampire)
+        {
+            if (times < 10)
+            {
+                times += Time.deltaTime;
+
+                Debug.Log(times);
+
+                if (times >= 10 && Cam2 != null && dollycart != null)
+                {
+                    Debug.Log("timer ends");
+                    CinemachineBrain.SoloCamera = playerCam;
+                    Destroy(Cam2.gameObject);
+                    Destroy(dollycart.gameObject);
+                    cmOn = false;
+                    //GUIManager1.talkPopup.SetActive(true);
+                }
             }
         }
 
@@ -242,6 +321,19 @@ public class NPC_Events : MonoBehaviour
         else if (VIDEDemoPlayer.trigger_lookat1 == false)
         {
             CCues.Lookat1.SetActive(false);
+        }
+
+        // Trigger Lookat2 --> TEXT SHOWS
+        if (VIDEDemoPlayer.trigger_lookat2 == true)
+        {
+            CCues.Lookat2.SetActive(true);
+            Clue2 = "Impersonated Guest is a magical creature.";
+            return;
+        }
+        // Trigger Lookat1 --> TEXT disappears
+        else if (VIDEDemoPlayer.trigger_lookat2 == false)
+        {
+            CCues.Lookat2.SetActive(false);
         }
 
         if (ChaosPoint == 3)

@@ -100,9 +100,25 @@ public class Player_Grabbing : MonoBehaviour
                         float posz = handright.transform.position.z;
                         grabbedObject.position = new Vector3(posx, posy, posz);
                         // replacement
+                    }
+                    else if (closeEnough == true && grabbedObject.gameObject.name == "treasurebox")
+                    {
 
-                        
-                        
+                        //DRAGON = target
+                        target = manager.NPC.GetComponent<NPCchildren>().Dragon.gameObject;
+                        Debug.Log(target + " player_grabbing");
+                        grabbed = true;
+                        grabbedObject.transform.parent = handright.transform;
+
+                        inHand = grabbedObject.gameObject;
+                        Debug.Log(inHand);
+                        inHandCheck = grabbedObject.gameObject.transform;
+                        inHand.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                        inHand.gameObject.GetComponent<Rigidbody>().isKinematic = true;
+                        float posx = handright.transform.position.x;
+                        float posy = handright.transform.position.y;
+                        float posz = handright.transform.position.z;
+                        grabbedObject.position = new Vector3(posx, posy, posz);
                     }
 
                     /*if (target == npcChild.Werewolf.gameObject)

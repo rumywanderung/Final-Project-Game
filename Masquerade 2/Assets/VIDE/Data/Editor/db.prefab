@@ -48,7 +48,7 @@ MonoBehaviour:
   loadTag: 
   startID: 0
   curFocusID: 0
-  currentID: 72891
+  currentID: 79896
   autosave: 1
   previewPanning: 0
   currentDiag: 19
@@ -56,13 +56,13 @@ MonoBehaviour:
   pNodeID: 18
   aNodeID: 2
   S_playerDiags:
-  - commentCount: 3
+  - commentCount: 1
     s_comment:
-    - text: This person is busy. Return with a drink.
+    - text: You walk up to the Vampire-masked guest...
       extraData: 
       inputSetIndex: 0
-      outputNodeIndex: -1
-      outActionIndex: 5
+      outputNodeIndex: 18
+      outActionIndex: -1
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -73,24 +73,24 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: '"Police. Can I ask you a few questions?" (CHAOS: +1)'
-      extraData: 
-      inputSetIndex: 0
-      outputNodeIndex: 7
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 88
-        width: 30
-        height: 28
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: '[Leave]'
-      extraData: 
-      inputSetIndex: 0
+    ID: 0
+    rect:
+      serializedVersion: 2
+      x: -1380
+      y: -170
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518, type: 3}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: The Monstrous Police is here???!!!
+      extraData: ExtraData
+      inputSetIndex: 1
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -103,24 +103,175 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    ID: 0
+    ID: 1
     rect:
       serializedVersion: 2
-      x: -60
-      y: 60
+      x: -30
+      y: 20
       width: 349
-      height: 179
+      height: 121
     pTag: 
     expand: 0
-    sprite: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518, type: 3}
+    sprite: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Oh, my brothers in arms! Where did you find this?"'
+      extraData: ExtraData
+      inputSetIndex: 2
+      outputNodeIndex: 12
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 21
+    rect:
+      serializedVersion: 2
+      x: 80
+      y: -320
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Ah, very well. Have a good night, then."'
+      extraData: ExtraData
+      inputSetIndex: 3
+      outputNodeIndex: 11
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 22
+    rect:
+      serializedVersion: 2
+      x: 100
+      y: -500
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"I used to have a group of friends myself... But they all died long ago."'
+      extraData: ExtraData
+      inputSetIndex: 4
+      outputNodeIndex: 14
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 41
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 24
+    rect:
+      serializedVersion: 2
+      x: 570
+      y: -150
+      width: 349
+      height: 141
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
     vars: []
     varKeys: []
     isPlayer: 1
-  - commentCount: 3
+  - commentCount: 1
     s_comment:
-    - text: Uh... Sure!
-      extraData: 
-      inputSetIndex: 1
+    - text: '"Hello again, pal!"'
+      extraData: ExtraData
+      inputSetIndex: 5
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 25
+    rect:
+      serializedVersion: 2
+      x: 50
+      y: -660
+      width: 349
+      height: 121
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"I''m not sure I can help you, but I''ve heard strange whispers over
+        there..."'
+      extraData: ExtraData
+      inputSetIndex: 6
+      outputNodeIndex: -1
+      outActionIndex: 1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 41
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 26
+    rect:
+      serializedVersion: 2
+      x: 2160
+      y: -160
+      width: 349
+      height: 141
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Hello. And who might you be?"'
+      extraData: ExtraData
+      inputSetIndex: 7
       outputNodeIndex: 9
       outActionIndex: -1
       showmore: 0
@@ -133,11 +284,341 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: No. You suck.
-      extraData: 
-      inputSetIndex: 1
+    ID: 27
+    rect:
+      serializedVersion: 2
+      x: -700
+      y: -290
+      width: 349
+      height: 121
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"I was in a hurry and didn''t have time to prepare."'
+      extraData: ExtraData
+      inputSetIndex: 8
+      outputNodeIndex: -1
+      outActionIndex: 0
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 28
+    rect:
+      serializedVersion: 2
+      x: -620
+      y: -800
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '"Your mask is rather disappointing. A goblin? Really?"'
+      extraData: ExtraData
+      inputSetIndex: 9
+      outputNodeIndex: 10
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 30
+    rect:
+      serializedVersion: 2
+      x: -670
+      y: -460
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Those have stopped scaring the Humans eons ago..."'
+      extraData: ExtraData
+      inputSetIndex: 10
       outputNodeIndex: 8
       outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 31
+    rect:
+      serializedVersion: 2
+      x: -650
+      y: -650
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '[You have run out of topics.]'
+      extraData: ExtraData
+      inputSetIndex: 11
+      outputNodeIndex: 17
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 21
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 32
+    rect:
+      serializedVersion: 2
+      x: 1260
+      y: -550
+      width: 349
+      height: 121
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '"You know, my ex-wife used to argue they were useless parasites, but...."'
+      extraData: ExtraData
+      inputSetIndex: 12
+      outputNodeIndex: 13
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 41
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 33
+    rect:
+      serializedVersion: 2
+      x: 150
+      y: -150
+      width: 349
+      height: 141
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"They were my friends."'
+      extraData: ExtraData
+      inputSetIndex: 13
+      outputNodeIndex: 4
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 21
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 34
+    rect:
+      serializedVersion: 2
+      x: 580
+      y: -330
+      width: 349
+      height: 121
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Ah, they weren''t immortals? Sad, sad stories, those... I sympathize."'
+      extraData: ExtraData
+      inputSetIndex: 14
+      outputNodeIndex: 15
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 41
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 35
+    rect:
+      serializedVersion: 2
+      x: 940
+      y: -130
+      width: 349
+      height: 141
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Listen, if you need anything tonight, just ask."'
+      extraData: ExtraData
+      inputSetIndex: 15
+      outputNodeIndex: 16
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 36
+    rect:
+      serializedVersion: 2
+      x: 1380
+      y: -130
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 0
+  - commentCount: 1
+    s_comment:
+    - text: '"Well, did you by any chance hear any rumors?"'
+      extraData: ExtraData
+      inputSetIndex: 16
+      outputNodeIndex: 6
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 28
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 37
+    rect:
+      serializedVersion: 2
+      x: 1740
+      y: -140
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 1
+    s_comment:
+    - text: '[Find some memory that will spark a conversation.]'
+      extraData: ExtraData
+      inputSetIndex: 17
+      outputNodeIndex: -1
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    ID: 2
+    rect:
+      serializedVersion: 2
+      x: 1710
+      y: -650
+      width: 349
+      height: 128
+    pTag: 
+    expand: 0
+    sprite: {fileID: 0}
+    vars: []
+    varKeys: []
+    isPlayer: 1
+  - commentCount: 3
+    s_comment:
+    - text: '"Hello."'
+      extraData: ExtraData
+      inputSetIndex: 18
+      outputNodeIndex: 7
+      outActionIndex: -1
+      showmore: 0
+      outRect:
+        serializedVersion: 2
+        x: 302
+        y: 59
+        width: 30
+        height: 21
+      sprites: {fileID: 0}
+      audios: {fileID: 0}
+      visible: 1
+    - text: '"Police." [CHAOS +1]'
+      extraData: ExtraData
+      inputSetIndex: 18
+      outputNodeIndex: -1
+      outActionIndex: 2
       showmore: 0
       outRect:
         serializedVersion: 2
@@ -148,9 +629,9 @@ MonoBehaviour:
       sprites: {fileID: 0}
       audios: {fileID: 0}
       visible: 1
-    - text: No. Bye. [Leave]
-      extraData: 
-      inputSetIndex: 1
+    - text: '[Leave]'
+      extraData: ExtraData
+      inputSetIndex: 18
       outputNodeIndex: -1
       outActionIndex: -1
       showmore: 0
@@ -166,8 +647,8 @@ MonoBehaviour:
     ID: 3
     rect:
       serializedVersion: 2
-      x: 870
-      y: 20
+      x: -970
+      y: -120
       width: 349
       height: 165
     pTag: 
@@ -176,829 +657,23 @@ MonoBehaviour:
     vars: []
     varKeys: []
     isPlayer: 1
-  - commentCount: 3
-    s_comment:
-    - text: Move!
-      extraData: 
-      inputSetIndex: 2
-      outputNodeIndex: -1
-      outActionIndex: 0
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Change color!
-      extraData: 
-      inputSetIndex: 2
-      outputNodeIndex: -1
-      outActionIndex: 1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 81
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Nevermind... [Leave]
-      extraData: 
-      inputSetIndex: 2
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 5
-    rect:
-      serializedVersion: 2
-      x: 1680
-      y: 50
-      width: 349
-      height: 165
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 2
-    s_comment:
-    - text: OMG!
-      extraData: 
-      inputSetIndex: 3
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Hello?
-      extraData: 
-      inputSetIndex: 3
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 81
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 9
-    rect:
-      serializedVersion: 2
-      x: 1210
-      y: 280
-      width: 349
-      height: 143
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: I know you're still here...
-      extraData: 
-      inputSetIndex: 4
-      outputNodeIndex: -1
-      outActionIndex: 3
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 10
-    rect:
-      serializedVersion: 2
-      x: 80
-      y: 510
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: Niiiice!
-      extraData: 
-      inputSetIndex: 5
-      outputNodeIndex: -1
-      outActionIndex: 4
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 13
-    rect:
-      serializedVersion: 2
-      x: 2430
-      y: -10
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 3
-    s_comment:
-    - text: MOAR MAGIC!
-      extraData: 
-      inputSetIndex: 6
-      outputNodeIndex: 9
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: "You're new!\t"
-      extraData: 
-      inputSetIndex: 6
-      outputNodeIndex: 8
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 81
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Nothing. Bye!
-      extraData: 
-      inputSetIndex: 6
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 17
-    rect:
-      serializedVersion: 2
-      x: 490
-      y: 670
-      width: 349
-      height: 165
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 3
-    s_comment:
-    - text: 
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: 1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Ahhh, dear friend, hellow!
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: The Monstrous Police is here???!!!
-      extraData: ExtraData
-      inputSetIndex: 7
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 1
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 1
-    rect:
-      serializedVersion: 2
-      x: 480
-      y: 40
-      width: 349
-      height: 192
-    pTag: ???
-    expand: 0
-    sprite: {fileID: 21300000, guid: 8b547fe9d26af744cb624a90abcbc953, type: 3}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: '...'
-      extraData: ExtraData
-      inputSetIndex: 8
-      outputNodeIndex: -1
-      outActionIndex: 2
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 2
-    rect:
-      serializedVersion: 2
-      x: 520
-      y: 330
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: What would you like to see?
-      extraData: ExtraData
-      inputSetIndex: 9
-      outputNodeIndex: 2
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 4
-    rect:
-      serializedVersion: 2
-      x: 1310
-      y: 60
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 4
-    s_comment:
-    - text: '...'
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: I've got no other choice but to erase your memory now.
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: '...'
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: YYYIIIAAA!!!
-      extraData: ExtraData
-      inputSetIndex: 10
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 11
-    rect:
-      serializedVersion: 2
-      x: 950
-      y: 460
-      width: 349
-      height: 194
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: '...'
-      extraData: ExtraData
-      inputSetIndex: 11
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 14
-    rect:
-      serializedVersion: 2
-      x: 1680
-      y: 290
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: What now?
-      extraData: ExtraData
-      inputSetIndex: 12
-      outputNodeIndex: 6
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 16
-    rect:
-      serializedVersion: 2
-      x: 80
-      y: 690
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: What now?
-      extraData: ExtraData
-      inputSetIndex: 13
-      outputNodeIndex: 14
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 18
-    rect:
-      serializedVersion: 2
-      x: 2010
-      y: -310
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 2
-    s_comment:
-    - text: Hi.
-      extraData: ExtraData
-      inputSetIndex: 14
-      outputNodeIndex: 11
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 302
-        y: 59
-        width: 30
-        height: 21
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    - text: Nevermind.
-      extraData: ExtraData
-      inputSetIndex: 14
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 19
-    rect:
-      serializedVersion: 2
-      x: 2420
-      y: -220
-      width: 349
-      height: 143
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 1
-  - commentCount: 1
-    s_comment:
-    - text: You may CONTINUE
-      extraData: ExtraData
-      inputSetIndex: 15
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 21
-    rect:
-      serializedVersion: 2
-      x: 980
-      y: -330
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
-  - commentCount: 1
-    s_comment:
-    - text: '[Leave]'
-      extraData: ExtraData
-      inputSetIndex: 16
-      outputNodeIndex: -1
-      outActionIndex: -1
-      showmore: 0
-      outRect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 0
-        height: 0
-      sprites: {fileID: 0}
-      audios: {fileID: 0}
-      visible: 1
-    ID: 22
-    rect:
-      serializedVersion: 2
-      x: 610
-      y: -450
-      width: 349
-      height: 121
-    pTag: 
-    expand: 0
-    sprite: {fileID: 0}
-    vars: []
-    varKeys: []
-    isPlayer: 0
   S_actionNodes:
-  - pauseHere: 0
-    gameObjectName: NPC_Witch
-    methodName: Move
-    nameIndex: 5
-    methodIndex: 4
-    paramIndex: 0
-    opts:
-    - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - ChangeColor
-    - Move
-    nameOpts:
-    - '[No object]'
-    - HelpText
-    - NPC_CrazyCap
-    - Canvas
-    - Player
-    - NPC_Witch
-    - NPC_Couple2
-    - NPC_Couple1
-    - dialogueUI
-    - NPC_Charlie
-    - NPC_Laura
-    param_bool: 0
-    param_string: 
-    param_int: 0
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 2130
-      y: -150
-      width: 200
-      height: 158
-    ID: 6
-    outPlayerIndex: -1
-    outActionIndex: -1
-    more: 0
-    ovrStartNode: 16
-    renameDialogue: 
-  - pauseHere: 1
-    gameObjectName: NPC_Witch
-    methodName: ChangeColor
-    nameIndex: 5
-    methodIndex: 3
-    paramIndex: 3
-    opts:
-    - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - ChangeColor
-    - Move
-    nameOpts:
-    - '[No object]'
-    - HelpText
-    - NPC_CrazyCap
-    - Canvas
-    - Player
-    - NPC_Witch
-    - NPC_Couple2
-    - NPC_Couple1
-    - dialogueUI
-    - NPC_Charlie
-    - NPC_Laura
-    param_bool: 0
-    param_string: 
-    param_int: 4
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 2160
-      y: 100
-      width: 200
-      height: 176
-    ID: 7
-    outPlayerIndex: 5
-    outActionIndex: -1
-    more: 0
-    ovrStartNode: -1
-    renameDialogue: 
-  - pauseHere: 1
-    gameObjectName: NPC_Witch
-    methodName: GoInvisible
-    nameIndex: 5
-    methodIndex: 5
-    paramIndex: 1
-    opts:
-    - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - ChangeColor
-    - Move
-    - GoInvisible
-    nameOpts:
-    - '[No object]'
-    - HelpText
-    - NPC_CrazyCap
-    - Canvas
-    - Player
-    - NPC_Witch
-    - NPC_Couple2
-    - NPC_Couple1
-    - dialogueUI
-    - NPC_Charlie
-    - NPC_Laura
-    param_bool: 0
-    param_string: 
-    param_int: 0
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 920
-      y: 250
-      width: 200
-      height: 176
-    ID: 8
-    outPlayerIndex: 3
-    outActionIndex: -1
-    more: 0
-    ovrStartNode: -1
-    renameDialogue: 
-  - pauseHere: 0
-    gameObjectName: NPC_Witch
-    methodName: GoInvisible
-    nameIndex: 5
-    methodIndex: 5
-    paramIndex: 1
-    opts:
-    - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - ChangeColor
-    - Move
-    - GoInvisible
-    nameOpts:
-    - '[No object]'
-    - HelpText
-    - NPC_CrazyCap
-    - Canvas
-    - Player
-    - NPC_Witch
-    - NPC_Couple2
-    - NPC_Couple1
-    - dialogueUI
-    - NPC_Charlie
-    - NPC_Laura
-    param_bool: 1
-    param_string: 
-    param_int: 0
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 580
-      y: 480
-      width: 200
-      height: 154
-    ID: 12
-    outPlayerIndex: 10
-    outActionIndex: -1
-    more: 1
-    ovrStartNode: -1
-    renameDialogue: 
-  - pauseHere: 1
-    gameObjectName: NPC_Witch
-    methodName: ChangeColor
-    nameIndex: 1
-    methodIndex: 3
-    paramIndex: 3
-    opts:
-    - '[No method]'
-    - GetAssigned
-    - AssignNew
-    - ChangeColor
-    - Move
-    - GoInvisible
-    nameOpts:
-    - '[No object]'
-    - NPC_Witch
-    - dialogueUI
-    param_bool: 0
-    param_string: 
-    param_int: 0
-    param_float: 0
-    rect:
-      serializedVersion: 2
-      x: 2890
-      y: 0
-      width: 200
-      height: 176
-    ID: 15
-    outPlayerIndex: -1
-    outActionIndex: -1
-    more: 0
-    ovrStartNode: -1
-    renameDialogue: 
   - pauseHere: 0
     gameObjectName: NPC EVENTS
     methodName: CheckInHand
-    nameIndex: 5
-    methodIndex: 4
+    nameIndex: 9
+    methodIndex: 7
     paramIndex: 0
     opts:
     - '[No method]'
     - Start
+    - OnGUI
     - DestroyObject
-    - CameraEvent
+    - CameraEventWerewolf
+    - CameraEventVampire
+    - CameraEventDragon
     - CheckInHand
+    - AddChaos
     - Update
     - GetAssigned
     - AssignNew
@@ -1008,14 +683,17 @@ MonoBehaviour:
     - OnAfterDeserialize
     nameOpts:
     - '[No object]'
+    - DollyTrack2
     - UIMANAGER
+    - DollyTrack1
     - Unicorn
+    - Ghost
     - cm
+    - Dragon
     - PlayerVC
     - NPC EVENTS
     - Vampire
-    - DollyTrack1
-    - GUEST A
+    - Witch
     - Werewolf
     param_bool: 0
     param_string: 
@@ -1023,21 +701,21 @@ MonoBehaviour:
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 460
-      y: -200
+      x: -190
+      y: -470
       width: 200
       height: 158
     ID: 20
     outPlayerIndex: -1
-    outActionIndex: 6
+    outActionIndex: -1
     more: 0
     ovrStartNode: -1
     renameDialogue: 
   - pauseHere: 0
     gameObjectName: NPC EVENTS
-    methodName: CameraEventWerewolf
+    methodName: CameraEventVampire
     nameIndex: 5
-    methodIndex: 3
+    methodIndex: 4
     paramIndex: 0
     opts:
     - '[No method]'
@@ -1070,12 +748,65 @@ MonoBehaviour:
     param_float: 0
     rect:
       serializedVersion: 2
-      x: 720
-      y: -300
+      x: 1750
+      y: -370
       width: 200
       height: 158
     ID: 23
-    outPlayerIndex: 15
+    outPlayerIndex: -1
+    outActionIndex: -1
+    more: 0
+    ovrStartNode: -1
+    renameDialogue: 
+  - pauseHere: 0
+    gameObjectName: NPC EVENTS
+    methodName: AddChaos
+    nameIndex: 9
+    methodIndex: 8
+    paramIndex: 0
+    opts:
+    - '[No method]'
+    - Start
+    - OnGUI
+    - DestroyObject
+    - CameraEventWerewolf
+    - CameraEventVampire
+    - CameraEventDragon
+    - CheckInHand
+    - AddChaos
+    - Update
+    - GetAssigned
+    - AssignNew
+    - SaveState
+    - LoadState
+    - OnBeforeSerialize
+    - OnAfterDeserialize
+    nameOpts:
+    - '[No object]'
+    - DollyTrack2
+    - UIMANAGER
+    - DollyTrack1
+    - Unicorn
+    - Ghost
+    - cm
+    - Dragon
+    - PlayerVC
+    - NPC EVENTS
+    - Vampire
+    - Witch
+    - Werewolf
+    param_bool: 0
+    param_string: 
+    param_int: 0
+    param_float: 0
+    rect:
+      serializedVersion: 2
+      x: -270
+      y: -150
+      width: 200
+      height: 158
+    ID: 29
+    outPlayerIndex: 1
     outActionIndex: -1
     more: 0
     ovrStartNode: -1
