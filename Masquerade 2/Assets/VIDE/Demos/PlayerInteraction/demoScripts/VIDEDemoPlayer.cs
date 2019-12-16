@@ -23,6 +23,7 @@ public class VIDEDemoPlayer : MonoBehaviour
 
     //FLAG
     public bool triggeredplayer = false;
+    public static bool trigger_lookat1 = false;
 
     //jump things
     /*private bool canJump = false;
@@ -43,11 +44,28 @@ public class VIDEDemoPlayer : MonoBehaviour
     {
         if (other.GetComponent<VIDE_Assign>() != null)
             inTrigger = other.GetComponent<VIDE_Assign>();
+
+        if (other.name == "trig_LookAt1")
+        {
+            //audio starts
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Play();
+            trigger_lookat1 = true;
+        }
     }
 
-    void OnTriggerExit()
+    void OnTriggerExit(Collider other)
     {
         inTrigger = null;
+
+        if (other.name == "trig_LookAt1")
+        {
+            //audio stops
+            AudioSource audio = other.GetComponent<AudioSource>();
+            audio.Stop();
+            trigger_lookat1 = false;
+        }
+       
     }
 
     void Start()

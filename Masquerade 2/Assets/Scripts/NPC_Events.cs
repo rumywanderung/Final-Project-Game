@@ -11,14 +11,15 @@ public class NPC_Events : MonoBehaviour
     public GameObject Player;
     //destroyObject
     public GameManager manager;
+    public GUIManager GUIManager1;
     GameObject grabableobject;
     //cameraEvent
     private Cinemachine.CinemachineVirtualCamera Cam;
     //public Cinemachine.CinemachineVirtualCamera Cam2;
-    public GameObject LookAts;
-    public GameObject Cue;
+    public GameObject LookAts1;
+    //public GameObject Cue1;
     public GameObject dollycart;
-    public GameObject dollytrack;
+    public Cinemachine.CinemachineSmoothPath dollytrack;
     private bool cmOn = false;
     private float times;
     public Cinemachine.CinemachineVirtualCamera playerCam;
@@ -27,6 +28,8 @@ public class NPC_Events : MonoBehaviour
     public bool wineGiven = false;
     //
     public GameObject intrig;
+    //
+    public CanvasCues CCues;
 
     public GameObject Werewolf;
     public GameObject Vampire;
@@ -42,15 +45,33 @@ public class NPC_Events : MonoBehaviour
     public float ChaosPoint;
     public string ChaosPointText;
 
+    // clues
+
+    public string Clue1 = "";
+    public string Clue2 = "";
+    public string Clue3 = "";
+    public string Clue1Text;
+    public string Clue2Text;
+    public string Clue3Text;
+
     public void Start()
     {
         manager = FindObjectOfType<GameManager>();
         grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
+        //clues
+        Clue1Text = "Clue #1: " + Clue1;
+        Clue2Text = "Clue #2: " + Clue2;
+        Clue3Text = "Clue #3: " + Clue3;
     }
 
     public void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
+        GUI.TextArea(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
+        //GUI.Box(new Rect(10, 10, 100, 20), ChaosPointText.ToString());
+        //GUI.Box(new Rect(10, 40, 100, 20), Clue1Text.ToString());
+        GUI.TextArea(new Rect(10, 40, 500, 20), Clue1Text.ToString());
+        GUI.TextArea(new Rect(10, 70, 500, 20), Clue2Text.ToString());
+        GUI.TextArea(new Rect(10, 100, 500, 20), Clue3Text.ToString());
     }
 
     public void DestroyObject()
@@ -59,6 +80,9 @@ public class NPC_Events : MonoBehaviour
         Destroy(grabableobject.gameObject);
     }
 
+    //CAMERAS
+
+    //camera WEREWOLF
     public void CameraEventWerewolf()
     {
         cmOn = true;
@@ -66,15 +90,11 @@ public class NPC_Events : MonoBehaviour
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
         Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
         Cam.m_Follow = dollycart.transform;
-        Cam.m_LookAt = LookAts.transform;
-
+        Cam.m_LookAt = LookAts1.transform;
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
-
-        /////Instantiate a trigger where player can walk and here something (maybe mark it with an X)
-       
     }
-
+    //camera VAMPIRE
     public void CameraEventVampire()
     {
         cmOn = true;
@@ -82,7 +102,7 @@ public class NPC_Events : MonoBehaviour
         dollycart = Instantiate(Resources.Load("DollyCart1", typeof(GameObject))) as GameObject;
         Cam = Instantiate(Resources.Load("CM vcam1", typeof(CinemachineVirtualCamera))) as CinemachineVirtualCamera;
         Cam.m_Follow = dollycart.transform;
-        Cam.m_LookAt = LookAts.transform;
+        Cam.m_LookAt = LookAts1.transform;
 
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack.GetComponent<CinemachineSmoothPath>();
         Debug.Log(Cam.Follow);
@@ -175,28 +195,26 @@ public class NPC_Events : MonoBehaviour
 
     public void Update()
     {
-
+        //CHAOS
         ChaosPointText = "Chaos: " + ChaosPoint;
-
-        /*if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject == null) {
-
-            //
-        }
-        else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject != null)
-        {
-           intrig = Player.GetComponent<VIDEDemoPlayer>().inTrigger.gameObject;
-        }*/
-
+        //CLUES
+        Clue1Text = "Clue #1: " + Clue1;
+        Clue2Text = "Clue #2: " + Clue2;
+        Clue3Text = "Clue #3: " + Clue3;
+        //check inhand
         grabableobject = manager.Player.GetComponent<Player_Grabbing>().inHand.gameObject;
-
+        //camera moving = true
         if (cmOn == true)
-        {///// camera event
-            if (times < 5)
+        {
+            GUIManager1.talkPopup.SetActive(false);
+
+            if (times < 9)
             {
                 times += Time.deltaTime;
+                
                 Debug.Log(times);
 
-                if (times >= 5 && Cam != null && dollycart != null)
+                if (times >= 9 && Cam != null && dollycart != null)
                 {
                     Debug.Log("timer ends");
                     /*Destroy(dollycart.gameObject);
@@ -206,8 +224,24 @@ public class NPC_Events : MonoBehaviour
                     //Player.SetActive(true);
                     CinemachineBrain.SoloCamera = playerCam;
                     cmOn = false;
-}
+                    GUIManager1.talkPopup.SetActive(true);
+                }                   
             }
+        }
+
+        //////////////////////////////////////TRIGGERS AFTER CAMERA
+
+        // Trigger Lookat1 --> TEXT SHOWS
+        if (VIDEDemoPlayer.trigger_lookat1 == true)
+        {
+            CCues.Lookat1.SetActive(true);
+            Clue1 = "Monster Hunter infiltrated the Guest's home.";
+            return;
+        }
+        // Trigger Lookat1 --> TEXT disappears
+        else if (VIDEDemoPlayer.trigger_lookat1 == false)
+        {
+            CCues.Lookat1.SetActive(false);
         }
 
         if (ChaosPoint == 3)

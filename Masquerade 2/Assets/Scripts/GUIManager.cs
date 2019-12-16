@@ -7,14 +7,23 @@ public class GUIManager : MonoBehaviour
 
     public GameObject Player;
     public GameObject talkPopup = null;
+    public CanvasCues CCues;
 
     private void Start()
     {
+        //Talk [E]
         talkPopup = Instantiate(Resources.Load("CanvasTalk")) as GameObject;
-       
         talkPopup.SetActive(false);
         talkPopup.transform.Find("Text").gameObject.SetActive(false);
-       // Debug.Log(talkPopup.activeInHierarchy);
+        GameObject var = FindObjectOfType<GameObject>();
+        if (var.name == "trig_LookAt1")
+        {
+           // lookats1 = var;
+        }
+        //CUES
+        CCues.Lookat1.SetActive(false);
+        CCues.Lookat2.SetActive(false);
+        CCues.Lookat3.SetActive(false);
     }
 
     void Update()
@@ -39,10 +48,5 @@ public class GUIManager : MonoBehaviour
             Debug.Log("both null");
             return;*/
         }
-        /*else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger != null && talkPopup != null)
-        {
-            Debug.Log("I'm having a convo");
-            return;
-        }*/
     }
 }
