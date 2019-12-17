@@ -111,7 +111,7 @@ public class Player_Grabbing : MonoBehaviour
                         grabbedObject.transform.parent = handright.transform;
 
                         inHand = grabbedObject.gameObject;
-                        Debug.Log(inHand);
+                        Debug.Log(inHand + " in my hand");
                         inHandCheck = grabbedObject.gameObject.transform;
                         inHand.gameObject.GetComponent<Rigidbody>().useGravity = false;
                         inHand.gameObject.GetComponent<Rigidbody>().isKinematic = true;

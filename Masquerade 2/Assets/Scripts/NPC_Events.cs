@@ -54,12 +54,15 @@ public class NPC_Events : MonoBehaviour
 
     // clues
 
-    public string Clue1 = "";
-    public string Clue2 = "";
-    public string Clue3 = "";
+    public string Clue1 = null;
+    public string Clue2 = null;
+    public string Clue3 = null;
     public string Clue1Text;
     public string Clue2Text;
     public string Clue3Text;
+    public bool clue1Found = false;
+    public bool clue2Found = false;
+    public bool clue3Found = false;
 
     public void Start()
     {
@@ -258,7 +261,7 @@ public class NPC_Events : MonoBehaviour
 
     public void Update()
     {
-        //CHAOS
+        //CHAOS (adding)
         ChaosPointText = "Chaos: " + ChaosPoint;
         //CLUES
         Clue1Text = "Clue #1: " + Clue1;
@@ -269,7 +272,7 @@ public class NPC_Events : MonoBehaviour
         //camera moving = true
         if (cmOn == true && intrig == Werewolf)
         {
-            //GUIManager1.talkPopup.SetActive(false);
+            GUIManager1.talkPopup.SetActive(false);
 
             if (times < 8)
             {
@@ -284,25 +287,47 @@ public class NPC_Events : MonoBehaviour
                     Destroy(Cam1.gameObject);
                     Destroy(dollycart.gameObject);
                     cmOn = false;
-                    //GUIManager1.talkPopup.SetActive(true);
+                    GUIManager1.talkPopup.SetActive(true);
+                    times = 0;
                 }
             }
         }
         else if (cmOn == true && intrig == Vampire)
         {
-            if (times < 10)
+            if (times < 8)
             {
                 times += Time.deltaTime;
 
                 Debug.Log(times);
 
-                if (times >= 10 && Cam2 != null && dollycart != null)
+                if (times >= 8 && Cam2 != null && dollycart != null)
                 {
                     Debug.Log("timer ends");
                     CinemachineBrain.SoloCamera = playerCam;
                     Destroy(Cam2.gameObject);
                     Destroy(dollycart.gameObject);
                     cmOn = false;
+                    times = 0;
+                    //GUIManager1.talkPopup.SetActive(true);
+                }
+            }
+        }
+        else if (cmOn == true && intrig == Dragon)
+        {
+            if (times < 8)
+            {
+                times += Time.deltaTime;
+
+                Debug.Log(times);
+
+                if (times >= 8 && Cam3 != null && dollycart != null)
+                {
+                    Debug.Log("timer ends");
+                    CinemachineBrain.SoloCamera = playerCam;
+                    Destroy(Cam3.gameObject);
+                    Destroy(dollycart.gameObject);
+                    cmOn = false;
+                    times = 0;
                     //GUIManager1.talkPopup.SetActive(true);
                 }
             }
@@ -313,8 +338,10 @@ public class NPC_Events : MonoBehaviour
         // Trigger Lookat1 --> TEXT SHOWS
         if (VIDEDemoPlayer.trigger_lookat1 == true)
         {
+            clue1Found = true;
             CCues.Lookat1.SetActive(true);
             Clue1 = "Monster Hunter infiltrated the Guest's home.";
+            //LookAts1 = null;
             return;
         }
         // Trigger Lookat1 --> TEXT disappears
@@ -322,23 +349,46 @@ public class NPC_Events : MonoBehaviour
         {
             CCues.Lookat1.SetActive(false);
         }
-
         // Trigger Lookat2 --> TEXT SHOWS
         if (VIDEDemoPlayer.trigger_lookat2 == true)
         {
+            clue2Found = true;
             CCues.Lookat2.SetActive(true);
             Clue2 = "Impersonated Guest is a magical creature.";
+            //LookAts2 = null;
             return;
         }
-        // Trigger Lookat1 --> TEXT disappears
+        // Trigger Lookat2 --> TEXT disappears
         else if (VIDEDemoPlayer.trigger_lookat2 == false)
         {
             CCues.Lookat2.SetActive(false);
         }
+        // Trigger Lookat3 --> TEXT SHOWS
+        if (VIDEDemoPlayer.trigger_lookat3 == true)
+        {
+            clue3Found = true;
+            CCues.Lookat3.SetActive(true);
+            Clue3 = "Impersonated Guest is male.";
+            //LookAts3 = null;
+            return;
+        }
+        // Trigger Lookat3 --> TEXT disappears
+        else if (VIDEDemoPlayer.trigger_lookat3 == false)
+        {
+            CCues.Lookat3.SetActive(false);
+        }
 
+        /////////////////////////////////////CHAOS POINTS
         if (ChaosPoint == 3)
         {
             Debug.Log("GAME OVER");
+        }
+
+        ////////////////////////////////////end of the game
+        if (clue1Found == true && clue2Found == true && clue3Found == true)
+        {
+            RuntimeAnimatorController arrival = Resources.Load("SATAN") as RuntimeAnimatorController;
+            Satan.GetComponent<Animator>().runtimeAnimatorController = arrival;
         }
     }
 }
