@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEditor;
 using VIDE_Data;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class NPC_Events : MonoBehaviour
 {
@@ -132,6 +133,16 @@ public class NPC_Events : MonoBehaviour
         Cam3.m_LookAt = LookAts3.transform;
         dollycart.GetComponent<CinemachineDollyCart>().m_Path = dollytrack3.GetComponent<CinemachineSmoothPath>();
         
+    }
+
+    public void WinGame()
+    {
+        SceneManager.LoadScene("WIN");
+    }
+
+    public void LoseGame()
+    {
+        SceneManager.LoadScene("LOSE");
     }
 
     public void CheckInHand()
