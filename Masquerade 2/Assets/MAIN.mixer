@@ -128,8 +128,8 @@ AudioMixerSnapshotController:
     12b32b91876965444b5776c73fa6b511: 0.0686
     c14669f1a1f268b488632dc543ecad43: 0
     b06873b5cacc956449021a0f87e7e6b8: 575
-    c5ab178872a8f6c42a4d250d06b9a0a5: -24
-    90305149c8d85fc4cb9e2cbf45f85c4d: -47.594658
+    c5ab178872a8f6c42a4d250d06b9a0a5: 5.2676334
+    90305149c8d85fc4cb9e2cbf45f85c4d: -19.55029
     5086b55964c2d694c8437aa2a7ae208b: -4968
     312a98ca45cf1984381e684944dc92fb: 0.0752
     133d998b8dbf8bb47b5567ea8cbeddbf: 2000
@@ -149,51 +149,8 @@ AudioMixerGroupController:
   m_Pitch: 72d44f0c3a344c0408382662c747a879
   m_Send: 00000000000000000000000000000000
   m_Effects:
-  - {fileID: 3627853450398687691}
   - {fileID: -3256744442701978583}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
---- !u!244 &3627853450398687691
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 378c56becac95394b90e69fb59c5fb80
-  m_EffectName: SFX Reverb
-  m_MixLevel: 518ec1eed2f97d84daa5a6b0ee9d23c3
-  m_Parameters:
-  - m_ParameterName: Dry Level
-    m_GUID: 5086b55964c2d694c8437aa2a7ae208b
-  - m_ParameterName: Room
-    m_GUID: a7bfc4395a1bfe04b9d472c32031a439
-  - m_ParameterName: Room HF
-    m_GUID: 62c17dad206704d4c8b9ee87d705ebb4
-  - m_ParameterName: Decay Time
-    m_GUID: a4edf9ac91b970f45b2a97dc2969e694
-  - m_ParameterName: Decay HF Ratio
-    m_GUID: 3ebe59d40592ec84490ac553ae17f3ba
-  - m_ParameterName: Reflections
-    m_GUID: af648660c1b11a149b8f7a870ee430e3
-  - m_ParameterName: Reflect Delay
-    m_GUID: cd09446107b4c2e48af3ea9273598424
-  - m_ParameterName: Reverb
-    m_GUID: b06873b5cacc956449021a0f87e7e6b8
-  - m_ParameterName: Reverb Delay
-    m_GUID: 12b32b91876965444b5776c73fa6b511
-  - m_ParameterName: Diffusion
-    m_GUID: 6224f28835820404abf5e67411fe4ff4
-  - m_ParameterName: Density
-    m_GUID: dfeaf194d1fbf654792e39da1910048b
-  - m_ParameterName: HF Reference
-    m_GUID: 7078bf83d588e3d4b85932841c986c36
-  - m_ParameterName: Room LF
-    m_GUID: 18167c9ebdaea0f4a94860aa0e40f9f2
-  - m_ParameterName: LF Reference
-    m_GUID: 42fd9fefe0a399f4492cff2d8f3987e1
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0

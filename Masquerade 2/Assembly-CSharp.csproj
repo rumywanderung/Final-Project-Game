@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Fonts\Script\scriptTexttest.cs" />
     <Compile Include="Assets\Resources\DEMO_UIManager.cs" />
     <Compile Include="Assets\Resources\VIDE_Assign.cs" />
     <Compile Include="Assets\RunemarkStudio\DarkFantasyKit [Free]\Readme\Parts\Readme.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\ButtonMenu.cs" />
     <Compile Include="Assets\Scripts\cameraCam.cs" />
     <Compile Include="Assets\Scripts\CanvasCues.cs" />
+    <Compile Include="Assets\Scripts\CursorVisible.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GUIManager.cs" />
     <Compile Include="Assets\Scripts\Intro_AddText.cs" />
@@ -104,12 +106,14 @@
     <Compile Include="Assets\VIDE\Demos\Template\Template_UIManager.cs" />
     <Compile Include="Assets\VIDE\Demos\VeryBasic\minUIExample.cs" />
     <None Include="Assets\VIDE\Export\Readme.txt" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateBubble_VersionHistory_1.1.txt" />
     <None Include="Assets\VIDE\Demos\About.txt" />
     <None Include="Assets\VIDE\Demos\Localization\README.txt" />
     <None Include="Assets\VIDE\Demos\MultiInstances\README.txt" />
     <None Include="Assets\Shaders\ToonShader.shader" />
     <None Include="Assets\VIDE\Demos\PlayerInteraction\README.txt" />
     <None Include="Assets\VIDE\ReadMe.txt" />
+    <None Include="Assets\Fonts\Documentation\JazzCreateAltKeys_BubbleFont.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>E:/Final-Project-Game/Masquerade 2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

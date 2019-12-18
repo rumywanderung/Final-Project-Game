@@ -18,7 +18,6 @@ ScriptsOnlyBuild:
     - VIDEDemoPlayer
     - VIDEUIManager1
     - VIDE_Assign
-    - VIDE_Editor_Skin
     - witchExample
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
@@ -31,8 +30,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -48,7 +49,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/LOSE.unity:
+    Assets/Scenes/CREDITS.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -67,7 +68,90 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9526}
+    - Class: 114
+      Script: {instanceID: 9528}
+    - Class: 114
+      Script: {instanceID: 9534}
+    - Class: 114
+      Script: {instanceID: 9540}
+    - Class: 114
+      Script: {instanceID: 9548}
+    - Class: 114
+      Script: {instanceID: 9584}
+    - Class: 114
+      Script: {instanceID: 9586}
+    - Class: 114
+      Script: {instanceID: 10394}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/LOSE.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9526}
+    - Class: 114
+      Script: {instanceID: 9528}
+    - Class: 114
+      Script: {instanceID: 9534}
+    - Class: 114
+      Script: {instanceID: 9540}
+    - Class: 114
+      Script: {instanceID: 9548}
+    - Class: 114
+      Script: {instanceID: 9584}
+    - Class: 114
+      Script: {instanceID: 9586}
+    - Class: 114
+      Script: {instanceID: 10394}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
     Assets/Scenes/MAIN.unity:
     - Class: 1
@@ -336,13 +420,47 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9526}
+    - Class: 114
+      Script: {instanceID: 9528}
+    - Class: 114
+      Script: {instanceID: 9534}
+    - Class: 114
+      Script: {instanceID: 9540}
+    - Class: 114
+      Script: {instanceID: 9548}
+    - Class: 114
+      Script: {instanceID: 9584}
+    - Class: 114
+      Script: {instanceID: 9586}
+    - Class: 114
+      Script: {instanceID: 10394}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1403,7 +1521,7 @@ ScriptsOnlyBuild:
     className: MobileControlRig
   - hash:
       serializedVersion: 2
-      Hash: dd4438bcc9f60b180a47165a0df0b016
+      Hash: de178d3581df6609410ca907c8e37073
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Introduction
@@ -2031,10 +2149,17 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
+  - hash:
+      serializedVersion: 2
+      Hash: 3a0e00fe942082621120621a94d8ce08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scriptTexttest
   platform: 19
   scenePathNames:
   - Assets/Scenes/START.unity
   - Assets/Scenes/MAIN.unity
   - Assets/Scenes/WIN.unity
   - Assets/Scenes/LOSE.unity
-  playerPath: C:/Users/r.bourkova/Desktop/MMM test 02/09-10-19.exe
+  - Assets/Scenes/CREDITS.unity
+  playerPath: C:/Users/r.bourkova/Desktop/MMM test 03/(MMM) Monster Murder Masquerade.exe

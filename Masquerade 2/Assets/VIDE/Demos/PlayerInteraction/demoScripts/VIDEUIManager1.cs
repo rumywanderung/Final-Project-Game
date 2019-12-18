@@ -149,7 +149,7 @@ public class VIDEUIManager1 : MonoBehaviour
                 for (int i = 0; i < currentChoices.Count; i++)
                 {
                     currentChoices[i].color = Color.white;
-                    if (i == data.commentIndex) currentChoices[i].color = Color.green;
+                    if (i == data.commentIndex) currentChoices[i].color = Color.grey;
                 }
             }
         }

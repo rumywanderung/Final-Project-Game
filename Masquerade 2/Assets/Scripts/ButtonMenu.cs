@@ -15,6 +15,16 @@ public class ButtonMenu : MonoBehaviour
           Application.Quit();
     }
 
+    public void Credits()
+    {
+        SceneManager.LoadScene("CREDITS");
+    }
+
+    public void MenuGame()
+    {
+        SceneManager.LoadScene("START");
+    }
+
     /*public void DisplaySliderValue(float value)
     {
         Debug.Log("Slider value: " + value.ToString());

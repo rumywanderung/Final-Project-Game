@@ -8,9 +8,11 @@ public class Introduction : MonoBehaviour
     public VIDEDemoPlayer Player;
     public GameObject intro00;
     public GameObject intro01;
+    public GameObject intro02;
     private bool inTrigger = false;
     private bool deletion0 = false;
     private bool deletion1 = false;
+    private bool deletion2 = false;
     public GameObject info;
     public GameObject particles;
     public AudioSource sfx;
@@ -54,6 +56,13 @@ public class Introduction : MonoBehaviour
             inTrigger = false;
             deletion1 = true;
         }
+        else if (this.name =="I: 02" && inTrigger == true)
+        {
+            GameObject intro = Instantiate(Resources.Load("INTRO 02") as GameObject);
+            intro02 = intro;
+            inTrigger = false;
+            deletion2 = true;
+        }
         //when to delete
         if (deletion0 == true)
         {
@@ -68,6 +77,15 @@ public class Introduction : MonoBehaviour
             if (Input.GetKeyUp("e"))
             {
                 DestroyObjects(intro01);
+                deletion1 = false;
+            }
+        }
+
+        else if (deletion2 == true)
+        {
+            if (Input.GetKeyUp("e"))
+            {
+                DestroyObjects(intro02);
                 deletion1 = false;
             }
         }

@@ -242,7 +242,7 @@ public class NPC_Events : MonoBehaviour
                 }
                 else if (intrig == Werewolf && wineGiven == false)
                 {
-                    VD.SetNode(22);
+                    VD.SetNode(24);
                 }
             
                 else if (intrig == Vampire && picGiven == true)
@@ -273,7 +273,7 @@ public class NPC_Events : MonoBehaviour
     public void Update()
     {
         //CHAOS (adding)
-        ChaosPointText = "Chaos: " + ChaosPoint;
+        ChaosPointText = "Chaos: " + ChaosPoint + "/3";
         //CLUES
         Clue1Text = "Clue #1: " + Clue1;
         Clue2Text = "Clue #2: " + Clue2;
@@ -365,7 +365,7 @@ public class NPC_Events : MonoBehaviour
         {
             clue2Found = true;
             CCues.Lookat2.SetActive(true);
-            Clue2 = "Impersonated Guest is a magical creature.";
+            Clue2 = "Impersonated Guest is a zoomorphic creature.";
             //LookAts2 = null;
             return;
         }
@@ -392,7 +392,7 @@ public class NPC_Events : MonoBehaviour
         /////////////////////////////////////CHAOS POINTS
         if (ChaosPoint == 3)
         {
-            Debug.Log("GAME OVER");
+            SceneManager.LoadScene("LOSE");
         }
 
         ////////////////////////////////////end of the game
@@ -400,6 +400,8 @@ public class NPC_Events : MonoBehaviour
         {
             RuntimeAnimatorController arrival = Resources.Load("SATAN") as RuntimeAnimatorController;
             Satan.GetComponent<Animator>().runtimeAnimatorController = arrival;
+            AudioSource audio = Satan.GetComponent<AudioSource>();
+            audio.Play();
         }
     }
 }
