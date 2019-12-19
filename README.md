@@ -26,6 +26,7 @@ art:
 
 music:
 - crowd (https://freesound.org/people/tim.kahn/sounds/336999/)
+- whispers (https://freesound.org/people/geoneo0/sounds/193815/)
 - cello ambiance (https://freesound.org/people/mikeonfire99/sounds/148176/)
 - satan's arrival (https://freesound.org/people/humanoide9000/sounds/457070/)
 - start menu (https://freesound.org/people/Slaking_97/sounds/332024/)
