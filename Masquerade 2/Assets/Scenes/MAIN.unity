@@ -19348,7 +19348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654249368}
   m_LocalRotation: {x: 0, y: -0.004489414, z: -0, w: 0.99999}
-  m_LocalPosition: {x: -0.019999966, y: -0.17000008, z: -1.0300013}
+  m_LocalPosition: {x: -0.019999646, y: -0.17000008, z: -1.0300051}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1575653240}
@@ -22672,6 +22672,7 @@ MonoBehaviour:
   clue1Found: 0
   clue2Found: 0
   clue3Found: 0
+  dramatic: {fileID: 5932405028065706716}
 --- !u!114 &870478413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49052,7 +49053,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575653239}
   m_LocalRotation: {x: -0, y: -0.999138, z: -0, w: 0.04151349}
-  m_LocalPosition: {x: 1.5, y: 3.674, z: 41.2}
+  m_LocalPosition: {x: 1, y: 3.674, z: 162.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 654249373}
@@ -49182,6 +49183,8 @@ MonoBehaviour:
   yaw: 0
   pitch: 0
   NPC: {fileID: 870478410}
+  move: 0
+  movebis: 0
   triggeredplayer: 0
   inTrigger: {fileID: 0}
   demo_Items: []
@@ -78574,7 +78577,7 @@ Animator:
   m_GameObject: {fileID: 5356415176586389974}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 32d7f560ca318d34a995ead673125c8a, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -78853,13 +78856,13 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 11b825809b8045e4899c7da2a4c204f0, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

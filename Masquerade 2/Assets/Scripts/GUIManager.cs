@@ -40,12 +40,10 @@ public class GUIManager : MonoBehaviour
 
         if (Player.GetComponent<VIDEDemoPlayer>().inTrigger != null && (talkPopup.activeInHierarchy == false || talkSatan.activeInHierarchy == false))
         {
-            Debug.Log(Player.GetComponent<VIDEDemoPlayer>().inTrigger + " is in trigger");
+           
 
             if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.name == "Icosphere")
             {
-                Player.GetComponent<VIDEDemoPlayer>().move = 0;
-                Player.GetComponent<VIDEDemoPlayer>().movebis = 0;
                 cello.Stop();
                 crowd.Stop();
                 Debug.Log("Satan is... " + Satana);
@@ -65,25 +63,18 @@ public class GUIManager : MonoBehaviour
         }
         else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger == null && (talkPopup.activeInHierarchy == true || talkSatan.activeInHierarchy == true))
         {
-            if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.name == "Icosphere")
-            {
-                talkSatan.SetActive(false);
-                talkSatan.transform.Find("Text").gameObject.SetActive(false);
-                return;
-            }
-
-            else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger.name != "Icosphere")
-            {
+               // talkSatan.SetActive(false);
+              //  talkSatan.transform.Find("Text").gameObject.SetActive(false);
                 talkPopup.SetActive(false);
                 talkPopup.transform.Find("Text").gameObject.SetActive(false);
                 return;
-            }
+            
         }
         else if (Player.GetComponent<VIDEDemoPlayer>().inTrigger == null && talkPopup.activeInHierarchy == false)
         {
-           /* talkPopup.SetActive(false);
+           talkPopup.SetActive(false);
             Debug.Log("both null");
-            return;*/
+            return;
         }
     }
 }

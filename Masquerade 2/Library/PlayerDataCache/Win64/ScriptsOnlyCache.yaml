@@ -31,8 +31,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -157,6 +159,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
     Assets/Scenes/MAIN.unity:
     - Class: 1
@@ -414,6 +422,12 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
+      Script: {instanceID: 0}
     Assets/Scenes/WIN.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -430,6 +444,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -470,6 +488,12 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 241
+      Script: {instanceID: 0}
+    - Class: 243
+      Script: {instanceID: 0}
+    - Class: 245
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1194,7 +1218,7 @@ ScriptsOnlyBuild:
     className: CinemachineFreeLook
   - hash:
       serializedVersion: 2
-      Hash: 7db41c9bf20992ee9abad8ef9a707e2f
+      Hash: 9c6633b293f6e928247e7e95252f70bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: VIDEDemoPlayer
@@ -2100,7 +2124,7 @@ ScriptsOnlyBuild:
     className: AmbientOcclusion
   - hash:
       serializedVersion: 2
-      Hash: 6042df699b80ee9edee684b97be77349
+      Hash: 5b89cb384c7755b366f71a936abbab9e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPC_Events
@@ -2177,4 +2201,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/WIN.unity
   - Assets/Scenes/LOSE.unity
   - Assets/Scenes/CREDITS.unity
-  playerPath: C:/Users/r.bourkova/Desktop/MMM test 06/(MMM) Monster Murder Masquerade.exe
+  playerPath: C:/Users/r.bourkova/Desktop/MMM 1.0/(MMM) Monster Murder Masquerade.exe

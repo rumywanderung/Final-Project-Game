@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 
 public class NPC_Events : MonoBehaviour
 {
+    private float i = 0;
     public GameObject Player;
     //destroyObject
     public GameManager manager;
@@ -65,6 +66,9 @@ public class NPC_Events : MonoBehaviour
     public bool clue1Found = false;
     public bool clue2Found = false;
     public bool clue3Found = false;
+
+    //audio
+    public AudioSource dramatic;
 
     public void Start()
     {
@@ -399,12 +403,20 @@ public class NPC_Events : MonoBehaviour
         ////////////////////////////////////end of the game
         if (clue1Found == true && clue2Found == true && clue3Found == true)
         {
-           
             RuntimeAnimatorController arrival = Resources.Load("SATAN") as RuntimeAnimatorController;
             Satan2.GetComponent<Animator>().runtimeAnimatorController = arrival;
-            AudioSource audio = Satan.GetComponent<AudioSource>();
-            Debug.Log(audio.name);
-            audio.Play();
+            dramatic.Play();
+            clue1Found = false;
+            /*if (i <= 500)
+            {
+                i++;
+            }
+            else if (i >= 500)
+            {
+                dramatic.Play();
+                clue1Found = false;
+                return;
+            }*/
         }
     }
 }

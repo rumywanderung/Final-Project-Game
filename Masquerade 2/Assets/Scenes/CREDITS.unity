@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 858e3bf7c465d9747b05bb85c13e18a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!1 &534480949
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,7 +272,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -91, y: -299}
+  m_AnchoredPosition: {x: -82, y: -299}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534480951
@@ -546,7 +547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285, y: -237}
+  m_AnchoredPosition: {x: -346, y: -142}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1488609857
@@ -582,7 +583,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: for more info, please refer to the README.txt
+  m_Text: for more credits & info, please refer to the README.txt
 --- !u!222 &1488609858
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -718,7 +719,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.41509432, g: 0.41509432, b: 0.41509432, a: 0}
+  m_BackGroundColor: {r: 0.0754717, g: 0.03172783, b: 0.029547881, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -878,7 +879,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -204, y: 189}
+  m_AnchoredPosition: {x: -346, y: 189}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2000446711
@@ -914,13 +915,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'SCRIPT by Roumiana Bourkova
-
-
-    CODE by Roumiana Bourkova
-
-
-    DESIGN by Roumiana Bourkova
+  m_Text: 'SCRIPT/CODE/DESIGN by Roumiana Bourkova
 
 
     DIGITAL ART by Karen Salcedo
@@ -930,7 +925,7 @@ MonoBehaviour:
 
     3D Assets: Asset Store, Turbo Squid
 
-    Dialogue: VIDE Dialogues Unity plug-in'
+    Dialogue: VIDE Dialogues'
 --- !u!222 &2000446712
 CanvasRenderer:
   m_ObjectHideFlags: 0
