@@ -46,6 +46,7 @@ public class NPC_Events : MonoBehaviour
     public GameObject Dragon;
     public GameObject Witch;
     public GameObject Satan;
+    public GameObject Satan2;
     public GameObject Guard;
 
     //CHAOS
@@ -399,9 +400,10 @@ public class NPC_Events : MonoBehaviour
         if (clue1Found == true && clue2Found == true && clue3Found == true)
         {
             RuntimeAnimatorController arrival = Resources.Load("SATAN") as RuntimeAnimatorController;
-            Satan.GetComponent<Animator>().runtimeAnimatorController = arrival;
+            Satan2.GetComponent<Animator>().runtimeAnimatorController = arrival;
             AudioSource audio = Satan.GetComponent<AudioSource>();
             audio.Play();
+            audio.loop = true;
         }
     }
 }

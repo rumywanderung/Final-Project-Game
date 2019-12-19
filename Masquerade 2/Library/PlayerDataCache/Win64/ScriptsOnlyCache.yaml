@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - ButtonAppear
     - ButtonMenu
     - CanvasCues
+    - CursorVisible
     - DEMO_UIManager
     - GUIManager
     - GameManager
@@ -30,13 +31,9 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
-    UnityEditor.TestRunner.dll:
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -83,7 +80,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9586}
     - Class: 114
-      Script: {instanceID: 10394}
+      Script: {instanceID: 10396}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -138,7 +135,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9586}
     - Class: 114
-      Script: {instanceID: 10394}
+      Script: {instanceID: 10396}
+    - Class: 114
+      Script: {instanceID: 11440}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -235,33 +234,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9962}
     - Class: 114
-      Script: {instanceID: 10272}
+      Script: {instanceID: 10274}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10384}
     - Class: 114
-      Script: {instanceID: 10388}
+      Script: {instanceID: 10390}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10502}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 10762}
+      Script: {instanceID: 10764}
     - Class: 114
-      Script: {instanceID: 10824}
+      Script: {instanceID: 10826}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 11056}
     - Class: 114
-      Script: {instanceID: 11058}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11086}
     - Class: 114
-      Script: {instanceID: 11296}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11340}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11370}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -370,27 +369,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10204}
+      Script: {instanceID: 10206}
     - Class: 114
-      Script: {instanceID: 10272}
+      Script: {instanceID: 10274}
     - Class: 114
-      Script: {instanceID: 10340}
+      Script: {instanceID: 10342}
     - Class: 114
-      Script: {instanceID: 10382}
+      Script: {instanceID: 10384}
     - Class: 114
-      Script: {instanceID: 10394}
+      Script: {instanceID: 10396}
     - Class: 114
-      Script: {instanceID: 10500}
+      Script: {instanceID: 10502}
     - Class: 114
-      Script: {instanceID: 10560}
+      Script: {instanceID: 10562}
     - Class: 114
-      Script: {instanceID: 10762}
+      Script: {instanceID: 10764}
     - Class: 114
-      Script: {instanceID: 11064}
+      Script: {instanceID: 11066}
     - Class: 114
-      Script: {instanceID: 11084}
+      Script: {instanceID: 11086}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11284}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -447,7 +446,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9586}
     - Class: 114
-      Script: {instanceID: 10394}
+      Script: {instanceID: 10396}
+    - Class: 114
+      Script: {instanceID: 11440}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1305,6 +1306,12 @@ ScriptsOnlyBuild:
     className: Joystick
   - hash:
       serializedVersion: 2
+      Hash: 3a0e00fe942082621120621a94d8ce08
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: scriptTexttest
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -2043,7 +2050,7 @@ ScriptsOnlyBuild:
     className: Intro_AddText
   - hash:
       serializedVersion: 2
-      Hash: 05efbe18b54172018f8b04e408002937
+      Hash: 473278ae76f4c0eb392e1d2171b21931
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GUIManager
@@ -2145,16 +2152,16 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CursorVisible
+  - hash:
+      serializedVersion: 2
       Hash: 47cd05cf11ce8beb2fd9a1522f58f5ec
     assemblyName: Assembly-CSharp-firstpass.dll
     namespaceName: UnityStandardAssets.Utility
     className: AutoMobileShaderSwitch
-  - hash:
-      serializedVersion: 2
-      Hash: 3a0e00fe942082621120621a94d8ce08
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: scriptTexttest
   platform: 19
   scenePathNames:
   - Assets/Scenes/START.unity
@@ -2162,4 +2169,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/WIN.unity
   - Assets/Scenes/LOSE.unity
   - Assets/Scenes/CREDITS.unity
-  playerPath: C:/Users/r.bourkova/Desktop/MMM test 03/(MMM) Monster Murder Masquerade.exe
+  playerPath: C:/Users/r.bourkova/Desktop/MMM test 04/(MMM) Monster Murder Masquerade.exe
