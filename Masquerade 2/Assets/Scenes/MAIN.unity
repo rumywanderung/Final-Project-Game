@@ -49052,7 +49052,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575653239}
   m_LocalRotation: {x: -0, y: -0.999138, z: -0, w: 0.04151349}
-  m_LocalPosition: {x: 1.5, y: 3.674, z: 29.2}
+  m_LocalPosition: {x: 1.5, y: 3.674, z: 41.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 654249373}
@@ -78574,7 +78574,7 @@ Animator:
   m_GameObject: {fileID: 5356415176586389974}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32d7f560ca318d34a995ead673125c8a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -78797,9 +78797,9 @@ MonoBehaviour:
   assignedID: 2844
   assignedDialogue: NPCsatan
   interactionCount: 0
-  alias: Their Majesty, the Beast of Hell
+  alias: Satan
   overrideStartNode: -1
-  defaultNPCSprite: {fileID: 0}
+  defaultNPCSprite: {fileID: 21300000, guid: 314f0e64f74c1aa4cb1a5cff003c8d40, type: 3}
   defaultPlayerSprite: {fileID: 21300000, guid: f775a098929c6304abd95d2078c13518,
     type: 3}
   targetManager: {fileID: 0}
@@ -78836,10 +78836,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 1.44
+  m_Radius: 4.72
   m_Height: 0.25099987
   m_Direction: 1
-  m_Center: {x: -0.0099885035, y: -0.0035273575, z: 0.09826757}
+  m_Center: {x: -0.0099885035, y: -0.01, z: 3.82}
 --- !u!82 &5932405028065706716
 AudioSource:
   m_ObjectHideFlags: 0
@@ -78855,11 +78855,11 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500

@@ -20,6 +20,8 @@ public class VIDEDemoPlayer : MonoBehaviour
     public float yaw = 0.0f;
     public float pitch = 0.0f;
     public GameObject NPC;
+    public float move;
+    public float movebis;
 
     //FLAG
     public bool triggeredplayer = false;
@@ -130,8 +132,8 @@ public class VIDEDemoPlayer : MonoBehaviour
         {
             transform.Rotate(0 * Input.GetAxis("Mouse X"), 0,0);
             //transform.Rotate(0 * Input.GetAxis("Mouse Y"), -1, 0);
-            float move = Input.GetAxisRaw("Vertical");
-            float movebis = Input.GetAxisRaw("Horizontal");
+            move = Input.GetAxisRaw("Vertical");
+            movebis = Input.GetAxisRaw("Horizontal");
             transform.position += transform.forward * 10 * move * Time.deltaTime;
             transform.position += transform.right * 10 * movebis * Time.deltaTime;
             //blue.SetFloat("speed", move);

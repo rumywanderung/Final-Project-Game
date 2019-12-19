@@ -34,6 +34,8 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
     - UnityEditor.Graphs.AnimatorControllerTool
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -111,6 +113,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -325,6 +331,8 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
@@ -1540,7 +1548,7 @@ ScriptsOnlyBuild:
     className: AutoExposure
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: d0adc65b6f54d204e5a5dc174eb9a803
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonMenu
@@ -2050,7 +2058,7 @@ ScriptsOnlyBuild:
     className: Intro_AddText
   - hash:
       serializedVersion: 2
-      Hash: 473278ae76f4c0eb392e1d2171b21931
+      Hash: d3096e946cc786295eb2661f2d8e94f5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GUIManager
@@ -2092,7 +2100,7 @@ ScriptsOnlyBuild:
     className: AmbientOcclusion
   - hash:
       serializedVersion: 2
-      Hash: 2bf319366ec720985c76fd6d1a625dc3
+      Hash: 6042df699b80ee9edee684b97be77349
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NPC_Events
@@ -2169,4 +2177,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/WIN.unity
   - Assets/Scenes/LOSE.unity
   - Assets/Scenes/CREDITS.unity
-  playerPath: C:/Users/r.bourkova/Desktop/MMM test 04/(MMM) Monster Murder Masquerade.exe
+  playerPath: C:/Users/r.bourkova/Desktop/MMM test 06/(MMM) Monster Murder Masquerade.exe

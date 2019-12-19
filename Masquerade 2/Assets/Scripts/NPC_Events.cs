@@ -45,7 +45,7 @@ public class NPC_Events : MonoBehaviour
     public GameObject Unicorn;
     public GameObject Dragon;
     public GameObject Witch;
-    public GameObject Satan;
+    public GameObject Satan; //icosphere
     public GameObject Satan2;
     public GameObject Guard;
 
@@ -399,11 +399,12 @@ public class NPC_Events : MonoBehaviour
         ////////////////////////////////////end of the game
         if (clue1Found == true && clue2Found == true && clue3Found == true)
         {
+           
             RuntimeAnimatorController arrival = Resources.Load("SATAN") as RuntimeAnimatorController;
             Satan2.GetComponent<Animator>().runtimeAnimatorController = arrival;
             AudioSource audio = Satan.GetComponent<AudioSource>();
+            Debug.Log(audio.name);
             audio.Play();
-            audio.loop = true;
         }
     }
 }

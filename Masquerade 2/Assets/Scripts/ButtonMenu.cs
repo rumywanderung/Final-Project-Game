@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class ButtonMenu : MonoBehaviour
 {
+    public GameObject canvas;
     public void StartGame()
     {
+        canvas = GameObject.FindGameObjectWithTag("music");
+        canvas.GetComponent<AudioSource>().Stop();
         SceneManager.LoadScene("MAIN");
     }
 
