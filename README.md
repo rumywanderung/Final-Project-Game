@@ -23,6 +23,7 @@ art:
 - Using the free assets Classic Picture Frame (https://assetstore.unity.com/packages/3d/props/furniture/classic-picture-frame-59038)
 - Using the free assets Medieval Tavern Pack (https://assetstore.unity.com/packages/3d/props/furniture/medieval-tavern-pack-112546)
 - Using the free assets Free Rug Pack (https://assetstore.unity.com/packages/3d/props/interior/free-rug-pack-118178)
+- Using the free assets 3D Curatin (https://www.turbosquid.com/3d-models/3d-curtains-photorealistic-1188312)
 
 music:
 - crowd (https://freesound.org/people/tim.kahn/sounds/336999/)
