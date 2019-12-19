@@ -14,7 +14,7 @@ art:
 - Digital Art by Karen Salcedo
 
 3D assets:
-- NPC done with Blender, treasure box with MagicaVoxel @ me
+- Hands, NPC done with Blender, treasure box with MagicaVoxel @ me
 - Using the plug-in "VIDE Dialogues" from the Assets store (https://assetstore.unity.com/packages/tools/ai/vide-dialogues-69932)
 - Using the free assets Dark Fantasy Kit from the Assets store (https://assetstore.unity.com/packages/3d/environments/fantasy/dark-fantasy-kit-123894)
 - Using the free assets Dining Set (https://assetstore.unity.com/packages/3d/props/interior/dining-set-37029)
